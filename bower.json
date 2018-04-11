@@ -1,0 +1,21 @@
+{
+  "name": "test",
+  "description": "myWorkSpace",
+  "main": "index.js",
+  "authors": [
+    "Andrey Sarokin"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "normalize-css": "normalize.css#^7.0.0"
+  }
+}
