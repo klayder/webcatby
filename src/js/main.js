@@ -16,11 +16,29 @@ $(document).ready( function(){
   });
   
 let modalOverlay=$(".modalOverlay");
+let callBackForm=$(".mainContent__callBackForm");
+let submitBtn=$(".mainContent__formItem");
+let nameField=$("[name='name']");
+
+
+submitBtn.click((evt)=>{
+		evt.preventDefault();
+		if(!submitBtn.val()||!nameField.val()){
+			submitBtn.removeClass("error");
+			setTimeout(function(){
+       submitBtn.addClass("error");
+    },1);
+		}
+		
+
+		
+});
 
 $(".mainContent_priceFormBtn").click((evt)=>{
 		evt.preventDefault();
 		console.log("click");
 		modalOverlay.addClass("modalOverlay--show");
+		callBackForm.addClass("mainContent__callBackForm--show");
 });
 
 
@@ -38,6 +56,7 @@ $(window).keyup((evt)=>{
 
 function hideOverlay(){
 	modalOverlay.removeClass("modalOverlay--show");
+	callBackForm.removeClass("mainContent__callBackForm--show");
 }
 
 

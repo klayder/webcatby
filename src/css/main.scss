@@ -792,3 +792,36 @@ body{
 .modalOverlay--show{
 	display: block;
 }
+
+
+.mainContent__callBackForm--show{
+	width:320px;
+	margin-left: -160px;
+	margin-top: -130px;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	z-index: 10;
+	animation: bounce 0.6s;
+
+}
+
+.error{
+	animation: shake 0.6s;
+}
+
+
+@keyframes bounce{
+	0% {transform: translateY(-2000px);}
+	70% {transform: translateY(30px);}
+	90% {transform: translateY(-10px);}
+	100% {transform: translateY(0px);}
+}
+
+
+@keyframes shake{
+	0%, 100% {transform: translateX(0px);}
+	10%,30%,50%,70%,90% {transform: translateX(10px);}
+	20%,40%,60%,80% {transform: translateX(-10px);}
+	
+}
