@@ -17,7 +17,7 @@ $(document).ready( function(){
   
 let modalOverlay=$(".modalOverlay");
 let callBackForm=$(".mainContent__callBackForm");
-let submitBtn=$(".mainContent__formItem");
+let submitBtn=$("[type='submit']");
 let nameField=$("[name='name']");
 let phoneField=$("[name='number']");
 
