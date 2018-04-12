@@ -19,15 +19,16 @@ let modalOverlay=$(".modalOverlay");
 let callBackForm=$(".mainContent__callBackForm");
 let submitBtn=$(".mainContent__formItem");
 let nameField=$("[name='name']");
+let phoneField=$("[name='number']");
 
 
 submitBtn.click((evt)=>{
 		evt.preventDefault();
-		if(!submitBtn.val()||!nameField.val()){
+		if(!phoneField.val()||!nameField.val()){
 			submitBtn.removeClass("error");
 			setTimeout(function(){
-       submitBtn.addClass("error");
-    },1);
+       				submitBtn.addClass("error")},1);
+			!nameField.val()?nameField.focus():phoneField.focus();
 		}
 		
 
@@ -43,6 +44,7 @@ $(".mainContent_priceFormBtn").click((evt)=>{
 
 
 modalOverlay.click(hideOverlay);
+
 
 $(window).keyup((evt)=>{
 		if(evt.keyCode===27){
