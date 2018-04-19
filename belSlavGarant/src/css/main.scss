@@ -23,7 +23,7 @@ font-style: normal;
 
 font-family: 'Montserrat';
 src: url("../fonts/Montserrat/Montserrat-Medium.ttf") format("truetype");
-font-weight: medium;
+font-weight: 500;
 font-style: normal;
 
 }
@@ -105,7 +105,7 @@ font-style: normal;
 
 .mainHeader__phoneListItem--code{
 	font-size: 14px;
-	font-weight: medium;
+	font-weight: 500;
 	vertical-align: top;
 }
 
@@ -127,7 +127,7 @@ font-style: normal;
 
 .mainContent__mainHeading{
 	font-family: 'Gagalin';
-	font-size: 80px;
+	font-size: 70px;
 	text-transform: uppercase;
 	color: #fff;
 	text-align: center;
@@ -157,7 +157,7 @@ font-style: normal;
     cursor: pointer;
 }
 
-.mainContent__aboutUs{
+.mainContent__whoAreWe{
 	text-align: center;
 	background:url("../img/bg-about2.jpg") no-repeat top center rgba(0,169,155,.82);
 	margin-top:90px;
@@ -166,14 +166,14 @@ font-style: normal;
 	padding-bottom: 75px;
 }
 
-.mainContent__aboutUsHeading{
+.mainContent__whoAreWeHeading{
 	font-size: 'Montserrat';
 	font-weight: bold;
 	font-size: 26px;
 	text-transform: uppercase;
 }
 
-.mainContent__aboutUsHeading--name{
+.mainContent__whoAreWeHeading--name{
 	display: inline-block;
 	width: 212px;
 	height: 64px;
@@ -182,7 +182,7 @@ font-style: normal;
 	background: transparent url("../img/mc-logoMouzenidis.png");
 }
 
-.mainContentAboutUsDescription{
+.mainContentwhoAreWeDescription{
 	font-size: 'Montserrat';
 	font-weight: 600;
 
@@ -219,7 +219,7 @@ font-style: normal;
 .mainContent__chooseGalleryCaption{
 	font-family: 'Montserrat';
 	font-size: 22px;
-	font-weight: medium;
+	font-weight: 500;
 	text-align: center;
 	margin-top: 75px;
 	margin-bottom: 30px;
@@ -234,6 +234,8 @@ font-style: normal;
 
 .mainContent__fotowrap{
 	position: relative;
+	width: 100%;
+	height: 100%;
 }
 
 .mainContent__fotowrap:hover::after {
@@ -276,4 +278,355 @@ font-style: normal;
 .mainContent__fotowrap:hover .mainContent__galleryBtn{
 	
     cursor: pointer;
+}
+
+/****************************************** Section review ******************/
+.mainContent__reviews{
+	font-family: 'Montserrat';
+	text-align: center;
+	background: #3abeb1 url("../img/bg-review.jpg") top center no-repeat;
+	background-size: cover;
+	max-height: 885px;
+	padding-bottom: 190px;
+	
+}
+
+
+.mainContent__reviewsHeading{
+	font-family: inherit;
+	font-weight: bold;
+	font-size: 48px;
+	text-transform: uppercase;
+	color: #fff;
+	padding-top: 100px;
+	padding-bottom: 105px;
+}
+
+.mainContent__videoReviewWrap{
+	height: 380px;
+	background: #ffffff;
+	padding:20px;
+}
+
+.mainContent__videoReviewBtn{
+	width: 100%;
+	height: 288px;
+	border: none;
+	background: rgba(0,167,169,1) url(../img/bg-videoReview.jpg) no-repeat top left;
+	background-size: cover;
+	cursor: pointer;
+}
+
+.mainContent__videoReviewBtnWrap{
+	font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+	background-image: -webkit-linear-gradient(180deg, #fe210e 0%, #ffc000 100%);	
+	outline: none;
+    border: none;
+	border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+	border-radius: 60px;
+    display: block;
+	position: absolute;
+	top: 50%;
+	margin-top: -33px;
+	left: 50%;
+	margin-left: -125px;
+	
+	padding: 25px 80px;
+}
+
+.mainContent__videoReviewCaption{
+	margin-top: 25px;
+}
+
+.mainContent__videoReviewCaption{
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.mainContent__textReviewsItem:first-child{
+	padding-left: 7px;
+}
+
+.mainContent__textReviewsItem:last-child{
+	padding-right: 7px;
+}
+
+.mainContent__textReviwWrap{
+	
+	background: #fff;
+	text-align: left;
+	padding: 40px 35px 30px 20px;
+	font-weight: normal;
+	font-size: 17px;
+	position: relative;
+	z-index: 2;
+	border: 1px solid rgba(0,167,169,1);
+}
+
+.mainContent__textReviewOrigin{
+	display: inline-block;
+	margin-top: 18px;
+	font-weight: 600;
+}
+
+.mainContent__reviewOriginLink{
+	font-family: inherit;
+	font-weight: inherit;
+	font-size: inherit;
+	color: rgba(0,167,169,1);
+	
+}
+
+.mainContent__reviewOriginLink:hover{
+	text-decoration: none;
+	color: rgba(0,167,169,.6);
+}
+
+/****************************************** Section call ******************/
+
+
+.mainContent__call{
+
+	margin-top: 330px;
+	padding-top: 90px;
+	min-height: 275px;
+	background: rgba(0,167,169,1) url("../img/bg-call.jpg") no-repeat top center;
+	background-size: 100% auto;
+	position: relative;
+}
+
+.mainContent__call::before{
+	content: "";
+	width: 398px;
+	height: 370px;
+	display: block;
+	position: absolute;
+	background: url(../img/bg-manCall.png);
+	bottom: 0px;
+}
+
+.mainContent__callHeading{
+	font-family: 'Montserrat';
+	font-size: 36px;
+	font-weight: bold;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.mainContent__callContent{
+	font-family: 'Montserrat';
+	font-size: 20px;
+	font-weight: 500;
+	color: #fff;
+	margin-top: 25px;
+}
+
+.mainContent__callForm{
+	position: relative;
+}
+
+.mainContent__callFormInput{
+	font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+	background-image: -webkit-linear-gradient(180deg, #fe210e 0%, #ffc000 100%);	
+	outline: none;
+    border: none;
+	border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+	border-radius: 60px;
+    padding: 25px 60px;
+    display: block;
+    position: absolute;
+}
+
+.mainContent__callFormInput[type="text"]{
+	background: #ffffff;
+	padding-left: 40px;
+	padding-bottom: 20px;
+	padding-right: 70px;
+	color: #000;
+	left: 0;
+}
+
+.mainContent__callFormInput[type="submit"]{
+	
+	left: 270px;
+
+}
+/****************************************** Section services ******************/
+
+.mainContent__services{
+	text-align: center;	
+	padding-top: 90px;
+
+}
+
+.mainContent__servicesHeading{
+	font-family: 'Montserrat';
+	font-weight: bold;
+	font-size: 48px;
+	text-transform: uppercase;
+	color: #00a7a9;
+	margin-bottom: 100px;
+}
+
+.mainContent__servicesListItem{
+	padding: 7px;
+}
+
+.mainContent__servicesListItemWrap{
+	height: 215px;
+	background: rgba(0,167,169,1) url("../img/services/foto1.jpg") no-repeat top center;
+	background-size: cover;
+	padding-top: 75px;
+}
+
+.mainContent__servicesListItem:nth-child(2) .mainContent__servicesListItemWrap{
+	background-image: url("../img/services/foto2.jpg");
+}
+
+.mainContent__servicesListItem:nth-child(3) .mainContent__servicesListItemWrap{
+	background-image: url("../img/services/foto3.jpg");
+}
+
+.mainContent__servicesListItem:nth-child(4) .mainContent__servicesListItemWrap{
+	background-image: url("../img/services/foto4.jpg");
+}
+
+.mainContent__servicesListItem:nth-child(5) .mainContent__servicesListItemWrap{
+	background-image: url("../img/services/foto5.jpg");
+
+}
+
+.mainContent__servicesListItem:nth-child(6) .mainContent__servicesListItemWrap{
+	background-image: url("../img/services/foto6.jpg");
+}
+
+.mainContent__servicesListItem:nth-child(7) .mainContent__servicesListItemWrap{
+	background-image: url("../img/services/foto7.jpg");
+}
+
+.mainContent__servicesListItem--heading{
+	font-family: 'Montserrat';
+	font-weight: bold;
+	font-size: 20px;
+	text-transform: uppercase;
+	color: #fff;
+	width: 100%;
+	display: block;
+	background: rgba(0,167,167,.75);
+	padding-top: 25px;
+	padding-bottom: 25px;
+	
+}
+
+.mainContent__servicesListItem:nth-child(5) .mainContent__servicesListItem--heading{
+	padding-top: 15px;
+	padding-bottom: 15px;
+
+}
+
+/****************************************** Section BookIt**************/
+
+.mainContent__bookIt{
+	margin-top: 415px;
+	padding-top: 80px;
+	padding-bottom:  80px;
+	background: rgba(0,167,169,1) url("../img/bg-bookIt.jpg") no-repeat top center;
+	background-size: 100% 100%;
+	position: relative;
+}
+
+.mainContent__bookIt::before{
+	content: "";
+	width: 629px;
+	height: 380px;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -315px;
+	margin-top: -327px;
+
+	background: url(../img/bg-bookItGirl.png);
+}
+.mainContent__bookItHeadingWrap {
+	padding: 0;
+}
+.mainContent__bookItHeading{
+	font-family: 'Montserrat';
+	font-weight: bold;
+	font-size: 48px;
+	line-height: 52px;
+	color: #fff;
+}
+
+.mainContent__bookItFormInput{
+	font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 18px;
+    color: #fff;
+	background-image: -webkit-linear-gradient(180deg, #fe210e 0%, #ffc000 100%);	
+	width: 405px;
+	outline: none;
+    border: none;
+	border-radius: 30px;
+    padding: 25px 30px;
+    display: block;
+    
+    
+}
+
+.mainContent__bookItFormInput[name="bookFormViber"]{
+	background: #fff;
+	color: #000;
+	padding: 23px 30px;
+	margin-bottom: 20px;
+}
+.mainContent__bookItFormInput[name="bookFormText"]{
+	background: #fff;
+	color:#000;
+	resize: none;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+/****************************************** Section AboutUs**************/
+
+.mainContent__aboutUs{
+	font-family: 'Montserrat';
+	font-size: 18px;
+	margin-bottom: 350px;
+}
+
+.mainContent__aboutUsHeading{
+	font-weight: bold;
+	text-align: center;
+	font-size: 48px;
+	text-transform: uppercase;
+	color: #00a7a9;
+}
+
+.mainContent__regaliaItem{
+	padding-top: 70px;
+	padding-bottom: 110px;
+}
+
+
+
+
+.mainContent__aboutUsSliderItem{
+	max-width: 555px;
+	max-height: 330px;
+}
+
+
+
+.mainContent__aboutUsRegalia{
+	font-size: 18px;
+	color: #000;
 }

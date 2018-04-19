@@ -44,16 +44,17 @@
 	</header>
 	<main class="mainContent">
 		<section class="mainContent__timeToTravel">
-			
-				<div class="mainContent__mainHeadingWrap col-md-10 offset-md-1">
-					<h1 class="mainContent__mainHeading">пора отдыхать в турции!</h1>
+				<div class="container">
+					<div class="mainContent__mainHeadingWrap col-md-10 offset-md-1">
+						<h1 class="mainContent__mainHeading">пора отдыхать в турции!</h1>
+					</div>
 				</div>
 				<button class="mainContent__popupBtn ">
 					Я хочу в Турцию!
 				</button>
-				<article class="mainContent__aboutUs">
-					<h2 class="mainContent__aboutUsHeading">Мы - уполномоченное агенство <span class="mainContent__aboutUsHeading--name"></span></h2>
-					<p class="mainContentAboutUsDescription">А это значит - хорошие цены и эксклюзивные туры!</p>
+				<article class="mainContent__whoAreWe">
+					<h2 class="mainContent__whoAreWeHeading">Мы - уполномоченное агенство <span class="mainContent__whoAreWeHeading--name"></span></h2>
+					<p class="mainContentwhoAreWeDescription">А это значит - хорошие цены и эксклюзивные туры!</p>
 				</article>
 			
 		</section>
@@ -63,7 +64,7 @@
 			
 				<figure class="mainContent__timeToChooseGallery container">
 					<figcaption class="mainContent__chooseGalleryCaption">Вопрос <span class="mainContent__chooseGalleryCaption--cont">1/5</span>. Какой отдых ближе?</figcaption>
-					<ul class="mainContent__galleryList row col-md-12">
+					<ul class="mainContent__galleryList row">
 						<li class="mainContent__glleryItem col-md-7 p-2">
 							<div class="mainContent__fotowrap">
 								<img class="mainContent__glleryFoto" src="img/gallery/foto1.jpg" width="100%" height="100%" alt="">
@@ -98,32 +99,165 @@
 				</figure>
 			</sectinon>
 			<section class="mainContent__reviews">
-				<h2 class="mainContent__reviewsHeading">пускай туристы скажут  о нас за нас:)</h2>
-				<gallery class="mainContent__videoReviews">	
-
-				</gallery>
-				<ul class="mainContent__textReviewsList">
-					<li class="mainContent__textReviewsItem">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat omnis iure et corporis nisi ipsum placeat, voluptas nihil provident dolor, vel blanditiis veritatis labore. Sunt similique vel architecto voluptatum, eius.
-						<span class="mainContent__textReviewOrigin"><br>Отзыв взят
-							<a href="#" class="mainContent__reviewOriginLink">travel.otzyv.by</a> 
-						</span>
-					</li>
-					<li class="mainContent__textReviewsItem">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora molestiae fugiat similique voluptatem, odit explicabo iure pariatur culpa, aut, ex ab voluptas incidunt nesciunt nulla, minima cumque ea repellat error.
-						<span class="mainContent__textReviewOrigin"><br>Отзыв взят
-							<a href="#" class="mainContent__reviewOriginLink">travel.otzyv.by</a>
-						</span>
-					</li>
-					<li class="mainContent__textReviewsItem">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, eligendi, temporibus reiciendis rem odit qui illo accusantium architecto amet dicta doloribus dolorem placeat optio laborum, illum, sit ut sint ab!
-						<span class="mainContent__textReviewOrigin"><br>Отзыв взят
-							<a href="#" class="mainContent__reviewOriginLink">travel.otzyv.by</a>
-						</span>
-					</li>
-				</ul>
+				<h2 class="mainContent__reviewsHeading">пускай туристы скажут<br>о нас за нас:)</h2>
+				<div class="mainContent__reviewWrap container">	
+					<gallery class="mainContent__videoReviews">	
+						<ul class="mainContent__videoReviewsList row">
+							<li class="mainContent__videoReviewsItem col-md-6 p-2">
+								<div class="mainContent__videoReviewWrap">
+									<button class="mainContent__videoReviewBtn">
+										<sapn class="mainContent__videoReviewBtnWrap">Видеоотзыв</sapn>
+									</button>
+									<p class="mainContent__videoReviewCaption">Мария, летала в ноябре 2017 в Турцию </p>
+								</div>
+							</li>
+							<li class="mainContent__videoReviewsItem col-md-6 p-2">
+								<div class="mainContent__videoReviewWrap">
+									<button class="mainContent__videoReviewBtn">
+										<sapn class="mainContent__videoReviewBtnWrap">Видеоотзыв</sapn>
+									</button>
+									<p class="mainContent__videoReviewCaption">Мария, летала в ноябре 2017 в Турцию </p>
+								</div>
+							</li>
+						</ul>
+					</gallery>
+					<ul class="mainContent__textReviewsList row ">
+						<li class="mainContent__textReviewsItem col-md-4">
+							<div class="mainContent__textReviwWrap">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+								<span class="mainContent__textReviewOrigin"><br>Отзыв взят
+									<a href="#" class="mainContent__reviewOriginLink">travel.otzyv.by</a>
+								</span>
+							</div>
+						</li>
+						<li class="mainContent__textReviewsItem col-md-4">
+							<div class="mainContent__textReviwWrap">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, eligendi, temporibus reiciendis rem odit qui illo accusantium architecto amet dicta doloribus dolorem placeat optio laborum, illum, sit ut sint ab!
+									Officia, eligendi, temporibus reiciendis rem odit qui illo accusantium architecto amet dicta doloribus dolorem placeat optio laborum, illum, sit ut sint ab!
+								<span class="mainContent__textReviewOrigin"><br>Отзыв взят
+									<a href="#" class="mainContent__reviewOriginLink">travel.otzyv.by</a>
+								</span>
+							</div>
+						</li>
+						<li class="mainContent__textReviewsItem col-md-4">
+							<div class="mainContent__textReviwWrap">
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, eligendi, temporibus reiciendis rem odit qui illo accusantium architecto amet dicta doloribus dolorem placeat optio laborum, illum, sit ut sint ab!
+								<span class="mainContent__textReviewOrigin"><br>Отзыв взят
+									<a href="#" class="mainContent__reviewOriginLink">travel.otzyv.by</a>
+								</span>
+							</div>
+						</li>
+					</ul>
+				</div>
 			</section>
-		
+			<section class="mainContent__call">	
+				<div class="mainConten__callWrap container">
+					<div class="row">
+						<div class="mainContent__callContentWrap col-md-5 offset-md-2 p-0">	
+						<h2 class="mainContent__callHeading">полетели отдыхать!</h2>
+						<p class="mainContent__callContent">заполните форму</p>
+					</div>
+					
+					<form class="mainContent__callForm col-md-5" action="get">
+						<input class="mainContent__callFormInput" type="text" placeholder="Ваш номер" >
+						<input class="mainContent__callFormInput" type="submit" value="Подобрать тур" >
+					</form>
+					</div>
+				</div>
+			</section>
+			<section class="mainContent__services">
+				<h2 class="mainContent__servicesHeading">У НАС ПОЛНЫЙ НАБОР<br>ДЛЯ ОТДЫХА!</h2>
+				<div class="mainContent__servicesWrap container">	
+					<ul class="maincontent__servicesList row">
+						<li class="mainContent__servicesListItem col-md-4">
+							<div class="mainContent__servicesListItemWrap">
+									<span class="mainContent__servicesListItem--heading">подбор туров</span>
+							</div>
+						</li>
+						<li class="mainContent__servicesListItem col-md-4">
+							<div class="mainContent__servicesListItemWrap">
+									<span class="mainContent__servicesListItem--heading">авиабилеты</span>
+							</div>
+						</li>
+						<li class="mainContent__servicesListItem col-md-4">
+							<div class="mainContent__servicesListItemWrap">
+									<span class="mainContent__servicesListItem--heading">бронирование отелей</span>
+							</div>
+						</li>
+						<li class="mainContent__servicesListItem col-md-3">
+							<div class="mainContent__servicesListItemWrap">
+									<span class="mainContent__servicesListItem--heading">визы</span>
+							</div>
+						</li>
+						<li class="mainContent__servicesListItem col-md-3">
+							<div class="mainContent__servicesListItemWrap">
+									<span class="mainContent__servicesListItem--heading">подарочные сертификаты</span>
+							</div>
+						</li>
+						<li class="mainContent__servicesListItem col-md-3">
+							<div class="mainContent__servicesListItemWrap">
+									<span class="mainContent__servicesListItem--heading">sim-карты</span>
+							</div>
+						</li>
+						<li class="mainContent__servicesListItem col-md-3">
+							<div class="mainContent__servicesListItemWrap">
+									<span class="mainContent__servicesListItem--heading">страхование</span>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>	
+			<section class="mainContent__bookIt">
+				<div class="container">
+					<div class="row">
+						<article class="mainContent__bookItHeadingWrap col-md-6">
+							<h2 class="mainContent__bookItHeading">У вас нет времени?<br>Подберем 3 тура <br> под вас и вышлем <br> на Viber </h2>
+						</article>
+						<article class="mainContent__bookItFormWrap col-md-5 offset-md-1">
+							<form class="mainContent__bookItForm" action="" >
+								<input  class="mainContent__bookItFormInput" name="bookFormViber" type="text">
+								<textarea class="mainContent__bookItFormInput" name="bookFormText" rows="3"></textarea>
+								<input class="mainContent__bookItFormInput"  type="submit">
+							</form>
+						</article>
+					</div>
+				</div>
+			</section>
+			<section class="mainContent__aboutUs">
+				<div class="container">
+					<h2 class="mainContent__aboutUsHeading">о компании<br>
+					<div class="row">
+						<article class="mainContent__aboutUsRegalia col-md-6">
+							<ul class="mainContent__regaliaList row">
+								<li class="mainContent__regaliaItem col-md-6">
+									Уже 4 года от нас  улетают туристы 
+								</li>
+								<li class="mainContent__regaliaItem col-md-6">
+									 15 белорусских звезд  летали через нас	
+								</li>
+								<li class="mainContent__regaliaItem col-md-6">
+									Лучшее агенство  по Грузии 2017*    
+								</li>
+								<li class="mainContent__regaliaItem col-md-6">
+									Лучшее агенство  по продажам 2017*    
+								</li>
+							</ul>
+							<h3 class="mainContent_regaliaSpecification">
+								*по версии туроператора Вояж тур
+							</h3>
+						</article>
+						<article class="mainContent__aboutUsSlider col-md-6">
+							<div class="mainContent__aboutUsSliderItem">
+								
+							</div>
+							
+						</article>
+						<article class="mainContent__aboutUsDiplomas col-md-8 offset-md-2">
+							
+						</article>
+					</div>
+				</div>
+			</section>
 	</main>
 
 	<footer class="mainFooter">
