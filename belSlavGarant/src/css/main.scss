@@ -71,18 +71,14 @@ font-style: normal;
 	display: flex;
 }
 
-.mainHeader__logo {
-	display: block;
-	width: 99px;
-	height: 69px;
-	background: transparent url("../img/hd-logo.png");
-}
+
 
 .mainContent__address{
 	font-family: 'Montserrat';
 	font-size: 16px;
 	color: #000;
 	padding-top: 23px;
+	min-width: 190px;
 }
 
 .mainHeader__contacts{
@@ -92,6 +88,7 @@ font-style: normal;
 .mainHeader__phoneListItem{
 	padding: 0;
 	padding-left: 20px;
+	min-width: 140px;
 }
 
 .mainHeeader__phoneItem--link{
@@ -114,7 +111,7 @@ font-style: normal;
 .mainContent__timeToTravel{
 	padding-top: 245px;
 	background: #3abeb1 url("../img/bg-about.jpg") no-repeat top center;
-	background-size: 100% auto;
+	background-size: 100% 100%;
 	margin-bottom: 90px;
 }
 
@@ -160,6 +157,7 @@ font-style: normal;
 .mainContent__whoAreWe{
 	text-align: center;
 	background:url("../img/bg-about2.jpg") no-repeat top center rgba(0,169,155,.82);
+	background-size: 100% 100%;
 	margin-top:90px;
 	color: #fff;
 	padding-top: 100px;
@@ -183,7 +181,7 @@ font-style: normal;
 }
 
 .mainContentwhoAreWeDescription{
-	font-size: 'Montserrat';
+	font-family: 'Montserrat';
 	font-weight: 600;
 
 }
@@ -230,7 +228,10 @@ font-style: normal;
 	height: 265px;
 }
 
-
+.mainContent__glleryFoto{
+	width: 100%;
+	height: 100%;
+}
 
 .mainContent__fotowrap{
 	position: relative;
@@ -299,25 +300,37 @@ font-style: normal;
 	text-transform: uppercase;
 	color: #fff;
 	padding-top: 100px;
-	padding-bottom: 105px;
+	padding-bottom: 98px;
 }
+
+
 
 .mainContent__videoReviewWrap{
 	height: 380px;
 	background: #ffffff;
 	padding:20px;
+	
 }
 
-.mainContent__videoReviewBtn{
+.mainContent__videoReviewsItem:first-child .mainContent__videoReviewWrap{
+	margin-right: 10px;
+}
+
+.mainContent__videoReviewsItem:last-child .mainContent__videoReviewWrap{
+	margin-left: 10px;
+}
+
+.mainContent__videoReviewBtnWrap{
 	width: 100%;
 	height: 288px;
 	border: none;
 	background: rgba(0,167,169,1) url(../img/bg-videoReview.jpg) no-repeat top left;
 	background-size: cover;
+	display: block;
 	cursor: pointer;
 }
 
-.mainContent__videoReviewBtnWrap{
+.mainContent__videoReviewBtn{
 	font-family: 'Montserrat';
     font-weight: bold;
     font-size: 16px;
@@ -346,6 +359,10 @@ font-style: normal;
 	font-weight: 600;
 }
 
+.mainContent__textReviewsItem{
+	min-width: 320px;
+}
+
 .mainContent__textReviewsItem:first-child{
 	padding-left: 7px;
 }
@@ -354,8 +371,13 @@ font-style: normal;
 	padding-right: 7px;
 }
 
+.mainContent__textReviewsList{
+	padding-top: 8px;
+}
+
 .mainContent__textReviwWrap{
-	
+	max-height: 415px;
+	overflow: auto;
 	background: #fff;
 	text-align: left;
 	padding: 40px 35px 30px 20px;
