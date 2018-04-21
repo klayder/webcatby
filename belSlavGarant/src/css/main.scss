@@ -1,6 +1,10 @@
 @@include("../../bower_components/reset-css/reset.css");
 @@include("../../bower_components/bootstrap/dist/css/bootstrap.min.css");
 
+
+$primary-color: rgba(0,167,169,1);;
+
+
 @font-face{
 
 font-family: 'Montserrat';
@@ -51,7 +55,7 @@ font-style: normal;
 /****************************************** Header ******************/
 
 .mainHeader {
-	background: #ffffff;
+	background: #fff;
 	color: #000;
 	position: relative;
 	box-sizing: border-box;
@@ -110,7 +114,7 @@ font-style: normal;
 /****************************************** Section time to travel ******************/
 .mainContent__timeToTravel{
 	padding-top: 245px;
-	background: #3abeb1 url("../img/bg-about.jpg") no-repeat top center;
+	background: $primary-color url("../img/bg-about.jpg") no-repeat top center;
 	background-size: 100% 100%;
 	margin-bottom: 90px;
 }
@@ -131,20 +135,26 @@ font-style: normal;
 	
 }
 
-
-.mainContent__popupBtn{
-	font-family: 'Montserrat';
-    font-weight: bold;
-    font-size: 18px;
+.btns{
+	font-family: 'Montserrat';	
+	font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
     color: #fff;
-	background-image: -webkit-linear-gradient(180deg, #fe210e 0%, #ffc000 100%);	
+	background-image: linear-gradient(90deg,#ffc000  0%,#fe210e  100%);	
 	border-radius: 60px;
     outline: none;
     border: none;
-    padding: 25px 60px;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
-	display: block;
-	margin: 0 auto;
+    display: block;
+	box-shadow: 0 0 35px 0 #000;
+}
+
+.mainContent__popupBtn{
+	@extend .btns;
+    
+    margin: 0 auto;
+	font-size: 18px;
+    padding: 25px 90px;
     margin-top: 200px;
 }
 
@@ -199,20 +209,24 @@ font-style: normal;
 	text-align: center;
 	color: #00a7a9;
 	position: relative;
+	margin:0;
+
+	&:after{
+		content: "";
+		height: 3px;
+		width: 100%;
+		bottom: -20px;
+		width: 88px;
+		left: 50%;
+		margin-left: -44px;
+		display: block;
+		position: absolute;
+		background: #00a7a9;
+	}
+
 }
 
-.mainContent__timeToChooseHeading::after{
-	content: "";
-	height: 3px;
-	width: 100%;
-	bottom: -20px;
-	width: 88px;
-	left: 50%;
-	margin-left: -44px;
-	display: block;
-	position: absolute;
-	background: #00a7a9;
-}
+
 
 .mainContent__chooseGalleryCaption{
 	font-family: 'Montserrat';
@@ -258,17 +272,10 @@ font-style: normal;
 		
 }
 
+
+
 .mainContent__galleryBtn{
-	font-family: 'Montserrat';
-    font-weight: bold;
-    font-size: 16px;
-    color: #fff;
-	background-image: -webkit-linear-gradient(180deg, #fe210e 0%, #ffc000 100%);	
-	outline: none;
-    border: none;
-	border-bottom: 2px solid rgba(0, 0, 0, 0.2);
-	border-radius: 60px;
-    display: block;
+	@extend .btns;
 	position: absolute;
 	top: 50%;
 	margin-top: -30px;
@@ -293,23 +300,29 @@ font-style: normal;
 }
 
 
+
+
 .mainContent__reviewsHeading{
-	font-family: inherit;
-	font-weight: bold;
-	font-size: 48px;
-	text-transform: uppercase;
+	@extend .mainContent__timeToChooseHeading;
+	
 	color: #fff;
 	padding-top: 100px;
-	padding-bottom: 98px;
+	
+
+	&:after{
+		bottom: -20px;
+		background: #fff;
+	}
 }
 
 
 
 .mainContent__videoReviewWrap{
+	
 	height: 380px;
 	background: #ffffff;
 	padding:20px;
-	
+	margin-top:98px;
 }
 
 .mainContent__videoReviewsItem:first-child .mainContent__videoReviewWrap{
@@ -324,29 +337,25 @@ font-style: normal;
 	width: 100%;
 	height: 288px;
 	border: none;
-	background: rgba(0,167,169,1) url(../img/bg-videoReview.jpg) no-repeat top left;
+	background: $primary-color url(../img/bg-videoReview.jpg) no-repeat top left;
 	background-size: cover;
 	display: block;
 	cursor: pointer;
 }
 
+
+
+
 .mainContent__videoReviewBtn{
-	font-family: 'Montserrat';
-    font-weight: bold;
-    font-size: 16px;
-    color: #fff;
-	background-image: -webkit-linear-gradient(180deg, #fe210e 0%, #ffc000 100%);	
-	outline: none;
-    border: none;
-	border-bottom: 2px solid rgba(0, 0, 0, 0.2);
-	border-radius: 60px;
-    display: block;
+	@extend .btns;
+	
+	
+    
 	position: absolute;
 	top: 50%;
 	margin-top: -33px;
 	left: 50%;
 	margin-left: -125px;
-	
 	padding: 25px 80px;
 }
 
@@ -398,7 +407,7 @@ font-style: normal;
 	font-family: inherit;
 	font-weight: inherit;
 	font-size: inherit;
-	color: rgba(0,167,169,1);
+	color: $primary-color;
 	
 }
 
@@ -415,7 +424,7 @@ font-style: normal;
 	margin-top: 330px;
 	padding-top: 90px;
 	min-height: 275px;
-	background: rgba(0,167,169,1) url("../img/bg-call.jpg") no-repeat top center;
+	background: $primary-color url("../img/bg-call.jpg") no-repeat top center;
 	background-size: 100% auto;
 	position: relative;
 }
@@ -451,24 +460,15 @@ font-style: normal;
 }
 
 .mainContent__callFormInput{
-	font-family: 'Montserrat';
-    font-weight: bold;
-    font-size: 16px;
-    color: #fff;
-	background-image: -webkit-linear-gradient(180deg, #fe210e 0%, #ffc000 100%);	
-	outline: none;
-    border: none;
-	border-bottom: 2px solid rgba(0, 0, 0, 0.2);
-	border-radius: 60px;
+	@extend .btns;
     padding: 25px 60px;
-    display: block;
     position: absolute;
 }
 
 .mainContent__callFormInput[type="text"]{
-	background: #ffffff;
+	background: #fff;
 	padding-left: 40px;
-	padding-bottom: 20px;
+	padding-bottom: 24px;
 	padding-right: 70px;
 	color: #000;
 	left: 0;
@@ -488,11 +488,7 @@ font-style: normal;
 }
 
 .mainContent__servicesHeading{
-	font-family: 'Montserrat';
-	font-weight: bold;
-	font-size: 48px;
-	text-transform: uppercase;
-	color: #00a7a9;
+	@extend .mainContent__timeToChooseHeading;
 	margin-bottom: 100px;
 }
 
@@ -502,7 +498,7 @@ font-style: normal;
 
 .mainContent__servicesListItemWrap{
 	height: 215px;
-	background: rgba(0,167,169,1) url("../img/services/foto1.jpg") no-repeat top center;
+	background: $primary-color url("../img/services/foto1.jpg") no-repeat top center;
 	background-size: cover;
 	padding-top: 75px;
 }
@@ -558,7 +554,7 @@ font-style: normal;
 	margin-top: 415px;
 	padding-top: 80px;
 	padding-bottom:  80px;
-	background: rgba(0,167,169,1) url("../img/bg-bookIt.jpg") no-repeat top center;
+	background: $primary-color url("../img/bg-bookIt.jpg") no-repeat top center;
 	background-size: 100% 100%;
 	position: relative;
 }
@@ -587,18 +583,17 @@ font-style: normal;
 	color: #fff;
 }
 
+
+
 .mainContent__bookItFormInput{
-	font-family: 'Montserrat';
-    font-weight: bold;
+	@extend .btns;
+
+
     font-size: 18px;
-    color: #fff;
-	background-image: -webkit-linear-gradient(180deg, #fe210e 0%, #ffc000 100%);	
-	width: 405px;
-	outline: none;
-    border: none;
+    width: 405px;
 	border-radius: 30px;
     padding: 25px 30px;
-    display: block;
+    
     
     
 }
@@ -622,28 +617,45 @@ font-style: normal;
 .mainContent__aboutUs{
 	font-family: 'Montserrat';
 	font-size: 18px;
-	margin-bottom: 350px;
+	padding-top: 100px;
+	
 }
 
 .mainContent__aboutUsHeading{
-	font-weight: bold;
-	text-align: center;
-	font-size: 48px;
-	text-transform: uppercase;
-	color: #00a7a9;
+	@extend .mainContent__timeToChooseHeading;
+	margin-bottom: 90px;
 }
 
 .mainContent__regaliaItem{
+	font-family: inherit;
+	font-weight: 600;
+	font-size: 18px;
 	padding-top: 70px;
 	padding-bottom: 110px;
 }
 
+.mainContent__regaliaItem--bold{
+	font-weight: bold;
+}
 
+.mainContent__regaliaItem:nth-child(3),
+.mainContent__regaliaItem:nth-child(4){
+	padding-top: 0;
+	padding-bottom:25px ;
+}
 
+.mainContent_regaliaSpecification{
+	font-size: 14px;
+	font-weight: normal;
+	text-align: center;
+	padding: 0;
+	margin-left: -110px;
+}
 
 .mainContent__aboutUsSliderItem{
-	max-width: 555px;
-	max-height: 330px;
+	
+	height: 330px;
+	
 }
 
 
@@ -651,4 +663,117 @@ font-style: normal;
 .mainContent__aboutUsRegalia{
 	font-size: 18px;
 	color: #000;
+}
+
+.mainContent__aboutUsDiplomas{
+	margin-top: 115px;
+}
+
+
+
+.mainContent__diplomasListItem{
+	max-height: 240px;
+	overflow: hidden;
+	
+}
+
+.mainContent__diplomasListItem{
+	padding: 0;
+	padding-right: 10px;
+}
+
+.mainContent__diplomasListItem:last-child{
+	padding: 0;
+	padding-left: 10px;
+
+}
+
+.mainContent__diplomaItemWrap{
+	background: #ffc942;
+}
+
+.mainContent__diplomaImg{
+	opacity: 0.6;
+}
+.mainContent__diplomasList{
+	margin-bottom: 0;
+}
+
+/****************************************** Section specialOffer**************/
+
+.mainContent__specialOffer{
+	font-family: 'Montserrat';
+	background: $primary-color url("../img/bg-specilaOffert.jpg") no-repeat left top;
+	background-size: 100% 100%;
+	margin-bottom: 350px;
+	padding-top: 60px;
+	margin-top: 140px;
+	padding-bottom: 55px;
+	position: relative;
+	&:after{
+		content:"";
+		display: block;
+		width: 380px;
+		height: 492px;
+		position: absolute;
+		bottom: 0;
+		right: 10%;
+
+		background: url("../img/bg-manAndChildren.png");
+
+	}
+	&:before{
+		content: "";
+		display: block;
+		position: absolute;
+		height:34px;
+		width: 100%;
+		background: url("../img/top1.svg") no-repeat top center;
+		background-size: cover;
+		top: 0;
+	}
+}
+
+
+
+.mainContent__specialOfferTour{
+	text-align: center;
+}
+
+.mainContent__specialOfferHeading{
+	@extend .mainContent__timeToChooseHeading;
+	color: #fff;
+
+	&:after{
+		display: none;
+	}
+}
+
+.mainContent__specialOfferTourName{
+	font-weight: 600;
+	font-size: 24px;
+	color: #fff;
+	margin: 0; 
+	margin-top: 40px;
+}
+
+.maincontent__tourDetailsList{
+	font-weight: bold;
+	font-size:18px;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	margin: 0;
+}
+
+.mainContent__tourDetailsItem{
+	margin: 0 15px;
+	padding-top: 60px;
+}
+
+.mainContent__specialOffer--learnMore{
+	@extend .btns;
+	margin: 0 auto;
+	padding: 20px 60px;
+	margin-top: 40px;
 }
