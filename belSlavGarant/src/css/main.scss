@@ -386,7 +386,7 @@ font-style: normal;
 
 .mainContent__textReviwWrap{
 	max-height: 415px;
-	overflow: auto;
+	
 	background: #fff;
 	text-align: left;
 	padding: 40px 35px 30px 20px;
@@ -394,7 +394,33 @@ font-style: normal;
 	font-size: 17px;
 	position: relative;
 	z-index: 2;
-	border: 1px solid rgba(0,167,169,1);
+	border-bottom: 4px solid #009e91;
+	
+	
+	&:after{
+		content:"";
+		width:4px;
+		height: 101%;
+		display: block;
+		position: absolute;
+		top:0;
+		right:0;
+		margin-right: -4px;
+		background: linear-gradient(to bottom, transparent 150px,#009e91 150px,#009e91);
+		
+	}
+	&:before{
+		content:"";
+		width:4px;
+		height: 101%;
+		display: block;
+		position: absolute;
+		top:0;
+		left:0;
+		margin-left: -4px;
+		background: linear-gradient(to bottom, transparent 150px,#009e91 150px,#009e91);
+		
+	}
 }
 
 .mainContent__textReviewOrigin{
@@ -694,6 +720,7 @@ font-style: normal;
 
 .mainContent__diplomaImg{
 	opacity: 0.6;
+	width:100%;
 }
 .mainContent__diplomasList{
 	margin-bottom: 0;
@@ -705,7 +732,6 @@ font-style: normal;
 	font-family: 'Montserrat';
 	background: $primary-color url("../img/bg-specilaOffert.jpg") no-repeat left top;
 	background-size: 100% 100%;
-	margin-bottom: 350px;
 	padding-top: 60px;
 	margin-top: 140px;
 	padding-bottom: 55px;
@@ -722,16 +748,7 @@ font-style: normal;
 		background: url("../img/bg-manAndChildren.png");
 
 	}
-	&:before{
-		content: "";
-		display: block;
-		position: absolute;
-		height:34px;
-		width: 100%;
-		background: url("../img/top1.svg") no-repeat top center;
-		background-size: cover;
-		top: 0;
-	}
+	
 }
 
 
@@ -777,3 +794,231 @@ font-style: normal;
 	padding: 20px 60px;
 	margin-top: 40px;
 }
+
+.mainContent__specialOfferMask--top{
+	width: 100%;
+}
+
+/****************************************** Section specialOffer**************/
+
+.mainContent__comeToUs{
+	font-family: 'Montserrat';
+	padding-top: 90px;
+	position:relative;
+	position: relative;
+}
+
+.mainContent__comeToUsHeading{
+	@extend .mainContent__timeToChooseHeading;
+	margin-bottom: 90px;
+}
+
+.mainContent__comeToUsMap--openMapBtn{
+	width: 100%;
+	height: 413px;
+	background: #fbf5e4 url("../img/bg-map.jpg") no-repeat center top;
+	display: block;
+}
+
+.mainContent__comeToUsContacts{
+	text-align: center;
+	box-sizing: border-box;
+	background: $primary-color;
+	height: 450px;
+	padding-top: 95px;
+	width: 80%;
+	transform: skew(15deg,2deg);
+	position: absolute;
+	bottom: 000px;
+	left: -35%;
+	padding-left: 35%;
+	overflow: hidden;
+	&:after{
+		content: "";
+		display: block;
+		width: 75%;
+		height: 500px;
+		background: url("../img/bg-comeToUs.jpg") no-repeat;
+		background-size: 100% 100%;
+		position: absolute;
+		transform: skew(-15deg,-2deg);
+		top:-15px;
+		right:-80px;
+		z-index: -1;
+	}
+	
+}
+
+.mainContent__comeToUsContacts > *{
+	transform: skew(-15deg,-2deg);
+}
+
+.mainContent__comeToUsAddress{
+	font-family: 'Montserrat';
+	font-weight: bold;
+	font-size: 24px;
+	color: #fff;
+	margin: 0;
+}
+
+.mainContent__comeToUsAddress--smallText{
+	font-size: 18px;
+	font-weight: 600;
+	margin: 0;
+}
+
+.mainContent__comeToUsWorkTime{
+	font-family: inherit;
+	font-weight: 600;
+	font-size: 18px;
+	color: #fff;
+	margin-top: 30px;
+
+}
+
+.mainContent__comeToUsItem--link{
+	font-family: inherit;
+	font-weight: bold;
+	font-size: 24px;
+	color: #fff;
+	text-decoration: none;
+	vertical-align: top;
+}
+
+.mainContent__comeToUsTelehonesList{
+	margin: 0;
+	margin-top: 30px;
+}
+
+.mainContent__comeToUsListItem--code{
+	font-weight: normal;
+	font-size: 14px;
+}
+
+.mainContent__comeToUsEmailWrap{
+	margin-top: 40px;
+}
+
+.mainContent__comeToUsEmail{
+	
+	font-family: inherit;
+	font-size: 18px;
+	font-weight: 600;
+	color: #fff;
+}
+
+/****************************************** Footer**************/
+.mainFooter{
+	font-family: 'Montserrat';
+	font-weight: 600;
+	font-size: 16px;
+	padding-top: 50px;
+	padding-bottom: 30px;
+}
+
+.mainFooterWrap{
+	display: flex;
+	justify-content: space-between;
+}
+
+.mainFooter__UNPContent,
+.mainFooter__developedBy,
+.mainFooter__developedBy--link{
+	font-family: inherit;
+	font-weight: inherit;
+	font-size: inherit;
+	text-decoration: none;
+	color: #000;
+	margin: 0;
+}
+
+.mainFooter__copyright{
+	text-align: right;
+}
+
+
+
+/*
+.bg-arrow {
+    width: 18px; height: 13px;
+    background: url('css_sprites.png') -20px -20px;
+}
+
+x
+.bg-black_plane {
+    width: 20px; height: 20px;
+    background: url('css_sprites.png') -20px -126px;
+}
+
+x
+.bg-calendar__6_ {
+    width: 37px; height: 37px;
+    background: url('css_sprites.png') -20px -516px;
+}
+
+x
+.bg-call_answer {
+    width: 23px; height: 23px;
+    background: url('css_sprites.png') -20px -311px;
+}
+
+x
+.bg-dollar_symbol {
+    width: 16px; height: 30px;
+    background: url('css_sprites.png') -20px -374px;
+}
+
+x
+.bg-double_king_size_bed__1_ {
+    width: 38px; height: 32px;
+    background: url('css_sprites.png') -20px -444px;
+}
+
+x
+.bg-manager {
+    width: 48px; height: 46px;
+    background: url('css_sprites.png') -20px -834px;
+}
+
+x
+.bg-money_bag_with_dollar_symbol {
+    width: 35px; height: 42px;
+    background: url('css_sprites.png') -20px -752px;
+}
+
+x
+.bg-mts {
+    width: 23px; height: 23px;
+    background: url('css_sprites.png') -20px -248px;
+}
+
+x
+.bg-plane__4_ {
+    width: 40px; height: 40px;
+    background: url('css_sprites.png') -20px -672px;
+}
+
+x
+.bg-play_arrow {
+    width: 13px; height: 13px;
+    background: url('css_sprites.png') -20px -73px;
+}
+
+x
+.bg-pointing_up_arrow {
+    width: 29px; height: 39px;
+    background: url('css_sprites.png') -20px -593px;
+}
+
+x
+.bg-vel {
+    width: 30px; height: 22px;
+    background: url('css_sprites.png') -20px -186px;
+}
+
+x
+.bg-viber__1_ {
+    width: 51px; height: 57px;
+    background: url('css_sprites.png') -20px -920px;
+}
+*/
