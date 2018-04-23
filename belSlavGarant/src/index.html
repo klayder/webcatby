@@ -11,15 +11,15 @@
 <body>
 	<header class="mainHeader">
 		<div class="mainHeader__wrap container">
-			<div class="row">
+			<div class="row justify-content-between">
 				<section class="mainHeader__about col-md-5">
 					<a  class="mainHeader__logo" href="#">
 						<img src="img/hd-logo.png" width="99" height="69" alt="">
 					</a>
 					<p class="mainContent__address">г. Минск, ул.Л.Беды 39,<br> 1-й этаж, пом. 135</p>
 				</section>
-				<section class="mainHeader__contacts col-md-6 offset-md-1">
-					<ul class="mainHeader__phoneList row">
+				<section class="mainHeader__contacts col-lg-6  col-md-5">
+					<ul class="mainHeader__phoneList row justify-content-end">
 						<li class="mainHeader__phoneListItem">
 							<a class="mainHeeader__phoneItem--link" href="tel:+375172161125">
 								<span class="mainHeader__phoneListItem--code">(17)</span>
@@ -63,42 +63,184 @@
 			
 			<div class="mainContent__timeToChoose">
 				<h2 class="mainContent__timeToChooseHeading">давайте выбирать отдых!</h2>
-			
-				<figure class="mainContent__timeToChooseGallery container">
-					<figcaption class="mainContent__chooseGalleryCaption">Вопрос <span class="mainContent__chooseGalleryCaption--cont">1/5</span>. Какой отдых ближе?</figcaption>
-					<ul class="mainContent__galleryList row">
-						<li class="mainContent__glleryItem col-md-7 p-2">
-							<div class="mainContent__fotowrap">
-								<img class="mainContent__glleryFoto" src="img/gallery/foto1.jpg"  alt="">
-								<button class="mainContent__galleryBtn col-md-6 offset-md-3">Для детей</button>
-							</div>
-						</li>
-						<li class="mainContent__glleryItem col-md-5 p-2">
-							<div class="mainContent__fotowrap">
-								<img class="mainContent__glleryFoto" src="img/gallery/foto2.jpg"  alt="">
-								<button class="mainContent__galleryBtn col-md-8 offset-md-2">Реки алкоголя</button>
-							</div>
-						</li>
-						<li class="mainContent__glleryItem col-md-4 p-2">
-							<div class="mainContent__fotowrap">
-								<img class="mainContent__glleryFoto" src="img/gallery/foto3.jpg"  alt="">
-								<button class="mainContent__galleryBtn col-md-8 offset-md-2">Тюлень на пляже</button>
-							</div>
-						</li>
-						<li class="mainContent__glleryItem col-md-4 p-2">
-							<div class="mainContent__fotowrap">
-								<img class="mainContent__glleryFoto" src="img/gallery/foto4.jpg"  alt="">
-								<button class="mainContent__galleryBtn col-md-8 offset-md-2">Ночная жизнь</button>
-							</div>
-						</li>
-						<li class="mainContent__glleryItem col-md-4 p-2">
-							<div class="mainContent__fotowrap">
-								<img class="mainContent__glleryFoto" src="img/gallery/foto5.jpg"  alt="">
-								<button class="mainContent__galleryBtn col-md-8 offset-md-2">Экскурсии!</button>
-							</div>
-						</li>
-					</ul>
-				</figure>
+				<ul class="mainContent__timeToChooseQuestionList">
+					<li class="mainContent__timeToChooseQuestion mainContent__timeToChooseQuestion--active">
+						<figure class="mainContent__timeToChooseGallery container">
+							<figcaption class="mainContent__chooseGalleryCaption">Вопрос <span class="mainContent__chooseGalleryCaption--cont">1/5</span>. Какой отдых ближе?</figcaption>
+							<ul class="mainContent__galleryList row">
+								<li class="mainContent__glleryItem col-md-7 p-2">
+									<div class="mainContent__fotowrap">
+										<img class="mainContent__glleryFoto" src="img/gallery/foto1.jpg"  alt="">
+										<button class="mainContent__galleryBtn col-md-6 offset-md-3">Для детей</button>
+									</div>
+								</li>
+								<li class="mainContent__glleryItem col-md-5 p-2">
+									<div class="mainContent__fotowrap">
+										<img class="mainContent__glleryFoto" src="img/gallery/foto2.jpg"  alt="">
+										<button class="mainContent__galleryBtn col-md-8 offset-md-2">Реки алкоголя</button>
+									</div>
+								</li>
+								<li class="mainContent__glleryItem col-md-4 p-2">
+									<div class="mainContent__fotowrap">
+										<img class="mainContent__glleryFoto" src="img/gallery/foto3.jpg"  alt="">
+										<button class="mainContent__galleryBtn col-md-8 offset-md-2">Тюлень на пляже</button>
+									</div>
+								</li>
+								<li class="mainContent__glleryItem col-md-4 p-2">
+									<div class="mainContent__fotowrap">
+										<img class="mainContent__glleryFoto" src="img/gallery/foto4.jpg"  alt="">
+										<button class="mainContent__galleryBtn col-md-8 offset-md-2">Ночная жизнь</button>
+									</div>
+								</li>
+								<li class="mainContent__glleryItem col-md-4 p-2">
+									<div class="mainContent__fotowrap">
+										<img class="mainContent__glleryFoto" src="img/gallery/foto5.jpg"  alt="">
+										<button class="mainContent__galleryBtn col-md-8 offset-md-2">Экскурсии!</button>
+									</div>
+								</li>
+							</ul>
+						</figure>
+					</li>
+					<li class="mainContent__timeToChooseQuestion">
+						<figure class="mainContent__timeToChooseGallery container">
+							<figcaption class="mainContent__chooseGalleryCaption">Вопрос <span class="mainContent__chooseGalleryCaption--cont">2/5</span>Кто Вы?</figcaption>
+
+							<ul class="mainContent__galleryList row">
+								<li class="mainContent__glleryItem col-md-4 p-2">
+									<div class="mainContent__fotowrap">
+										<img class="mainContent__glleryFoto" src="img/gallery/foto1.jpg"  alt="">
+										<button class="mainContent__galleryBtn col-md-6 offset-md-3">пара</button>
+									</div>
+								</li>
+								<li class="mainContent__glleryItem col-md-4 p-2">
+									<div class="mainContent__fotowrap">
+										<img class="mainContent__glleryFoto" src="img/gallery/foto2.jpg"  alt="">
+										<button class="mainContent__galleryBtn col-md-8 offset-md-2">семья с детьми</button>
+									</div>
+								</li>
+								<li class="mainContent__glleryItem col-md-4 p-2">
+									<div class="mainContent__fotowrap">
+										<img class="mainContent__glleryFoto" src="img/gallery/foto3.jpg"  alt="">
+										<button class="mainContent__galleryBtn col-md-8 offset-md-2">компания друзей</button>
+									</div>
+								</li>
+								<li class="mainContent__glleryItem col-md-5 p-2">
+									<div class="mainContent__fotowrap">
+										<img class="mainContent__glleryFoto" src="img/gallery/foto4.jpg"  alt="">
+										<button class="mainContent__galleryBtn col-md-8 offset-md-2">одиночка </button>
+									</div>
+								</li>
+								<li class="mainContent__glleryItem col-md-7 p-2">
+									<div class="mainContent__fotowrap">
+										<img class="mainContent__glleryFoto" src="img/gallery/foto5.jpg"  alt="">
+										<button class="mainContent__galleryBtn col-md-8 offset-md-2">умудренные опытом люди</button>
+									</div>
+								</li>
+							</ul>
+						</figure>
+					</li>
+					<li class="mainContent__timeToChooseQuestion">
+						<figure class="mainContent__timeToChooseGallery container">
+							<figcaption class="mainContent__chooseGalleryCaption">Вопрос <span class="mainContent__chooseGalleryCaption--cont">3/5</span>. Сколько вас человек (включая детей)?</figcaption>
+							<ul class="mainContent__galleryList row">
+								<li class="mainContent__glleryItem col-md-7 p-2">
+									<div class="mainContent__fotowrap">
+										<img class="mainContent__glleryFoto" src="img/gallery/foto1.jpg"  alt="">
+										<button class="mainContent__galleryBtn col-md-6 offset-md-3">Я один</button>
+									</div>
+								</li>
+								<li class="mainContent__glleryItem col-md-5 p-2">
+									<div class="mainContent__fotowrap">
+										<img class="mainContent__glleryFoto" src="img/gallery/foto2.jpg"  alt="">
+										<button class="mainContent__galleryBtn col-md-8 offset-md-2">Двое</button>
+									</div>
+								</li>
+								<li class="mainContent__glleryItem col-md-4 p-2">
+									<div class="mainContent__fotowrap">
+										<img class="mainContent__glleryFoto" src="img/gallery/foto3.jpg"  alt="">
+										<button class="mainContent__galleryBtn col-md-8 offset-md-2">Трое</button>
+									</div>
+								</li>
+								<li class="mainContent__glleryItem col-md-4 p-2">
+									<div class="mainContent__fotowrap">
+										<img class="mainContent__glleryFoto" src="img/gallery/foto4.jpg"  alt="">
+										<button class="mainContent__galleryBtn col-md-8 offset-md-2">Четверо</button>
+									</div>
+								</li>
+								<li class="mainContent__glleryItem col-md-4 p-2">
+									<div class="mainContent__fotowrap">
+										<img class="mainContent__glleryFoto" src="img/gallery/foto5.jpg"  alt="">
+										<button class="mainContent__galleryBtn col-md-8 offset-md-2">Пятеро</button>
+									</div>
+								</li>
+							</ul>
+						</figure>
+					</li>
+					<li class="mainContent__timeToChooseQuestion">
+						<figure class="mainContent__timeToChooseGallery container">
+							<figcaption class="mainContent__chooseGalleryCaption">Вопрос <span class="mainContent__chooseGalleryCaption--cont">4/5</span>. Летите первый раз?</figcaption>
+							<ul class="mainContent__galleryList row">
+								<li class="mainContent__glleryItem col-md-4 p-2">
+									<div class="mainContent__fotowrap">
+										<img class="mainContent__glleryFoto" src="img/gallery/foto3.jpg"  alt="">
+										<button class="mainContent__galleryBtn col-md-8 offset-md-2">Да</button>
+									</div>
+								</li>
+								<li class="mainContent__glleryItem col-md-4 p-2">
+									<div class="mainContent__fotowrap">
+										<img class="mainContent__glleryFoto" src="img/gallery/foto4.jpg"  alt="">
+										<button class="mainContent__galleryBtn col-md-8 offset-md-2">нет, но в эту страну первый</button>
+									</div>
+								</li>
+								<li class="mainContent__glleryItem col-md-4 p-2">
+									<div class="mainContent__fotowrap">
+										<img class="mainContent__glleryFoto" src="img/gallery/foto5.jpg"  alt="">
+										<button class="mainContent__galleryBtn col-md-8 offset-md-2">нет, но в эту стране уже был</button>
+									</div>
+								</li>
+							</ul>
+						</figure>
+					</li>
+					<li class="mainContent__timeToChooseQuestion">
+						<div class="container">
+							<form class="mainContent__questionForm col-md-4 offset-md-4" action="" >
+							<h2 class="mainContent__chooseGalleryCaption">Вопрос <span class="mainContent__chooseGalleryCaption--cont">5/5</span>. Как с Вами связаться?</h2>
+							<input 	class="mainContent__questionFormInput" 
+									type="text"
+									placeholder="Тип отдыха"  
+									name="restType">
+							<input 	class="mainContent__questionFormInput" 
+									type="text"
+									placeholder="Кто вы"  
+									name="who">
+							<input 	class="mainContent__questionFormInput" 
+									type="text"
+									placeholder="Сколько вас"  
+									name="howMany">
+							<input 	class="mainContent__questionFormInput" 
+									type="text"
+									placeholder="Были раньше"  
+									name="wasEarlier">
+							<input 	class="mainContent__questionFormInput" 
+									type="text" 
+									placeholder="Ваше имя" 
+									name="clientName">
+							<input 	class="mainContent__questionFormInput" 
+									type="text" 
+									placeholder="Ваш телефон" 
+									name="clientNumber">
+							<select class="mainContent__questionFormInput" name="whenCall">
+								<option value="placeholder">Когда вам удобно позвонить</option>
+								<option value="am">До обеда</option>
+								<option value="pm">После обеда</option>
+							</select>
+							<input class="mainContent__questionFormInput" type="submit" value="Получить варианты">
+
+						</form>
+						</div>
+					</li>
+				</ul>
+				
 			</div>
 			<section class="mainContent__reviews">
 				<h2 class="mainContent__reviewsHeading">пускай туристы скажут<br>о нас за нас:)</h2>
@@ -124,7 +266,7 @@
 						</ul>
 					</div>
 					<ul class="mainContent__textReviewsList row ">
-						<li class="mainContent__textReviewsItem col-md-4">
+						<li class="mainContent__textReviewsItem col-xl-4 d-none d-xl-block ">
 							<div class="mainContent__textReviwWrap">
 									Добрый день, посетители интернет-портала "Отзывы-бай". Хочу поделиться своим впечатлением о сотрудничестве с туристическим агентством "БелСлавГарант". Уже само название этой фирмы предполагает, что "белорусам славный отдых будет гарантирован", что, по своей сути на деле и подтвердилось. 
 								<span class="mainContent__textReviewOrigin">Отзыв взят
@@ -132,7 +274,7 @@
 								</span>
 							</div>
 						</li>
-						<li class="mainContent__textReviewsItem col-md-4">
+						<li class="mainContent__textReviewsItem  col-md-8 offset-md-2 col-xl-4 offset-xl-0">
 							<div class="mainContent__textReviwWrap">
 									Добрый день, посетители интернет-портала "Отзывы-бай". Хочу поделиться своим впечатлением о сотрудничестве с туристическим агентством "БелСлавГарант". Уже само название этой фирмы предполагает, что "белорусам славный отдых будет гарантирован", что, по своей сути на деле и подтвердилось. 
 								<span class="mainContent__textReviewOrigin">Отзыв взят
@@ -140,7 +282,7 @@
 								</span>
 							</div>
 						</li>
-						<li class="mainContent__textReviewsItem col-md-4">
+						<li class="mainContent__textReviewsItem col-xl-4 d-none d-xl-block ">
 							<div class="mainContent__textReviwWrap">
 									Добрый день, посетители интернет-портала "Отзывы-бай". Хочу поделиться своим впечатлением о сотрудничестве с туристическим агентством "БелСлавГарант". Уже само название этой фирмы предполагает, что "белорусам славный отдых будет гарантирован", что, по своей сути на деле и подтвердилось. 
 								<span class="mainContent__textReviewOrigin">Отзыв взят
@@ -153,16 +295,17 @@
 			</section>
 			<section class="mainContent__call">	
 				<div class="mainConten__callWrap container">
-					<div class="row">
-						<div class="mainContent__callContentWrap col-md-5 offset-md-1 p-0">	
+					<div class="row justify-content-center">
+						<div class="mainContent__callContentWrap col-md-5 p-0">	
 						<h2 class="mainContent__callHeading">полетели отдыхать!</h2>
 						<p class="mainContent__callContent">заполните форму</p>
 					</div>
 					
-					<form class="mainContent__callForm col-md-6" action="get">
-						<div class="mainContent__callFormInputWrap">
-							<input class="mainContent__callFormInput" type="text" placeholder="Ваш номер" >
+					<form class="mainContent__callForm col-md-6" action="">
+						<div class="mainContent__callFormInputWrap clearfix">
 							<input class="mainContent__callFormInput" type="submit" value="Подобрать тур" >
+							<input class="mainContent__callFormInput" type="text" placeholder="Ваш номер" name="phoneNumber">
+							
 						</div>
 					</form>
 					</div>
@@ -174,37 +317,37 @@
 					<ul class="maincontent__servicesList row">
 						<li class="mainContent__servicesListItem col-md-4">
 							<div class="mainContent__servicesListItemWrap">
-									<span class="mainContent__servicesListItem--heading">подбор туров</span>
+									<a class="mainContent__servicesListItem--heading" href="#">подбор туров</a>
 							</div>
 						</li>
 						<li class="mainContent__servicesListItem col-md-4">
 							<div class="mainContent__servicesListItemWrap">
-									<span class="mainContent__servicesListItem--heading">авиабилеты</span>
+									<a class="mainContent__servicesListItem--heading" href="#">авиабилеты</a>
 							</div>
 						</li>
 						<li class="mainContent__servicesListItem col-md-4">
 							<div class="mainContent__servicesListItemWrap">
-									<span class="mainContent__servicesListItem--heading">бронирование отелей</span>
+									<a class="mainContent__servicesListItem--heading" href="#">бронирование отелей</a>
 							</div>
 						</li>
 						<li class="mainContent__servicesListItem col-md-3">
 							<div class="mainContent__servicesListItemWrap">
-									<span class="mainContent__servicesListItem--heading">визы</span>
+									<a class="mainContent__servicesListItem--heading" href="#">визы</a>
 							</div>
 						</li>
 						<li class="mainContent__servicesListItem col-md-3">
 							<div class="mainContent__servicesListItemWrap">
-									<span class="mainContent__servicesListItem--heading">подарочные сертификаты</span>
+									<a class="mainContent__servicesListItem--heading" href="#">подарочные сертификаты</a>
 							</div>
 						</li>
 						<li class="mainContent__servicesListItem col-md-3">
 							<div class="mainContent__servicesListItemWrap">
-									<span class="mainContent__servicesListItem--heading">sim-карты</span>
+									<a class="mainContent__servicesListItem--heading" href="#">sim-карты</a>
 							</div>
 						</li>
 						<li class="mainContent__servicesListItem col-md-3">
 							<div class="mainContent__servicesListItemWrap">
-									<span class="mainContent__servicesListItem--heading">страхование</span>
+									<a class="mainContent__servicesListItem--heading" href="#">страхование</a>
 							</div>
 						</li>
 					</ul>
@@ -341,12 +484,45 @@
 					<h3 class="mainFooter__UNPContent">ООО «БелСлавГарант»<br>УНП191147160</h3>
 				</article>
 				<article class="mainFooter__copyright">
-					<p class="mainFooter__developedBy">	Разработано</p>
+					<p class="mainFooter__developedBy">Разработано</p>
 					<a href="http://webcat.by/" class="mainFooter__developedBy--link">webcat.by</a>
 				</article>
 			
 		</div>
 	</footer>
+
+	<div class="modal__screen" >
+		
+	</div>
+
+	<div class="popup__thanks" >
+		<h2 class="popup__thanksHeading">Спасибо за заявку!</h2>
+		<h3 class="thanksSocialHeading">Подписывайтесь на наши соц.сети</h3>
+		<ul class="popup__thanksSocialList">
+			<li class="popup__thanksSocialItem">
+				<a href="https://vk.com/belslavgarant" class="popup__thanksSocialItem--link"></a>
+			</li>
+			<li class="popup__thanksSocialItem">
+				<a href="https://www.instagram.com/belslavgarant/" class="popup__thanksSocialItem--link"></a>
+			</li>
+			<li class="popup__thanksSocialItem">
+				<a href="https://m.facebook.com/bslavgarant/" class="popup__thanksSocialItem--link"></a>
+			</li>
+		</ul>
+		<button class="popup__thanks--goBack">Вернутся</button>
+	</div>
+
+	<div class="popup__form">
+		<form action="">
+			<h2 class="popup__formHeading">Заполните форму</h2>
+			<input class="popup__formInput" placeholder="Ваше имя" type="text" name="name" >
+			<input class="popup__formInput" placeholder="Ваш телефон" type="text" name="number" >
+			<input class="popup__formInput" placeholder="Количество человек" type="text" name="persons" >
+			<input class="popup__formInput" placeholder="Сколько *" type="text" name="summ" >
+			<input class="popup__formInput" type="submit">
+		</form>
+	</div>
+	
 
 	<script type="text/javascript" src="js/main.js"></script>
 </body>
