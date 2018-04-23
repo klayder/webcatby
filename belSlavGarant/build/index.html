@@ -24,7 +24,7 @@
 							<a class="mainHeeader__phoneItem--link" href="tel:+375172161125">
 								<span class="mainHeader__phoneListItem--code">(17)</span>
 								216-11-25
-							</a>
+							</a> 
 						</li>
 						<li class="mainHeader__phoneListItem">
 							<a class="mainHeeader__phoneItem--link" href="tel:+375296827722">
@@ -154,14 +154,16 @@
 			<section class="mainContent__call">	
 				<div class="mainConten__callWrap container">
 					<div class="row">
-						<div class="mainContent__callContentWrap col-md-5 offset-md-2 p-0">	
+						<div class="mainContent__callContentWrap col-md-5 offset-md-1 p-0">	
 						<h2 class="mainContent__callHeading">полетели отдыхать!</h2>
 						<p class="mainContent__callContent">заполните форму</p>
 					</div>
 					
-					<form class="mainContent__callForm col-md-5" action="get">
-						<input class="mainContent__callFormInput" type="text" placeholder="Ваш номер" >
-						<input class="mainContent__callFormInput" type="submit" value="Подобрать тур" >
+					<form class="mainContent__callForm col-md-6" action="get">
+						<div class="mainContent__callFormInputWrap">
+							<input class="mainContent__callFormInput" type="text" placeholder="Ваш номер" >
+							<input class="mainContent__callFormInput" type="submit" value="Подобрать тур" >
+						</div>
 					</form>
 					</div>
 				</div>
@@ -212,13 +214,16 @@
 				<div class="container">
 					<div class="row">
 						<article class="mainContent__bookItHeadingWrap col-md-6">
-							<h2 class="mainContent__bookItHeading">У вас нет времени?<br>Подберем 3 тура <br> под вас и вышлем <br> на Viber </h2>
+							<h2 class="mainContent__bookItHeading">У вас нет времени?<br>Подберем 3 тура <br> под вас и вышлем <span class="mainContent__bookItHeading--viberIcon">на Viber</span></h2>
 						</article>
 						<article class="mainContent__bookItFormWrap col-md-5 offset-md-1">
 							<form class="mainContent__bookItForm" action="get" >
-								<input  class="mainContent__bookItFormInput" name="bookFormViber" type="text">
-								<textarea class="mainContent__bookItFormInput" name="bookFormText" rows="3"></textarea>
-								<input class="mainContent__bookItFormInput"  type="submit">
+								<input  class="mainContent__bookItFormInput" name="bookFormViber" type="text" placeholder="Ваш номер Viber">
+								<textarea class="mainContent__bookItFormInput" name="bookFormText" rows="3" placeholder="Как хотите отдохнуть"></textarea>
+								<div class="mainContent__bookItInputWrap">
+									<input class="mainContent__bookItFormInput"  type="submit" value="Получить подборку 3х туров">
+								</div>
+								
 							</form>
 						</article>
 					</div>

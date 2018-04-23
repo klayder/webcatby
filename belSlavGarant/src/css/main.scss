@@ -10,7 +10,7 @@ $primary-color: rgba(0,167,169,1);;
 font-family: 'Montserrat';
 src: url("../fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
 font-weight: normal;
-font-style: normal;
+font-style: normal; 
 
 }
 
@@ -91,8 +91,32 @@ font-style: normal;
 
 .mainHeader__phoneListItem{
 	padding: 0;
-	padding-left: 20px;
+	padding-left: 30px;
+	margin-right: 30px;
 	min-width: 140px;
+	position: relative;
+	&:before{
+		content:"";
+		width: 30px;
+		height: 25px;
+		display: block;
+		position: absolute;
+		background: url('../img/Sprite/css_sprites.png') -20px -311px;
+		left: 0;
+		top: 0;
+	}
+}
+.mainHeader__phoneListItem:last-child{
+	margin-right: 0;
+	&:before{
+		background-position: -20px -248px;
+	}
+}
+
+.mainHeader__phoneListItem:nth-child(2){
+	&:before{
+		background-position: -20px -186px;
+	}
 }
 
 .mainHeeader__phoneItem--link{
@@ -156,6 +180,18 @@ font-style: normal;
 	font-size: 18px;
     padding: 25px 90px;
     margin-top: 200px;
+    position: relative;
+    &:after{
+    	content: "";
+    	position: absolute;
+    	width: 20px;
+    	height: 20px;
+    	display: block;
+    	background: url('../img/Sprite/css_sprites.png') -20px -126px;
+    	top: 50%;
+    	left: 80%;
+    	margin-top: -10px;
+    }
 }
 
 
@@ -357,6 +393,18 @@ font-style: normal;
 	left: 50%;
 	margin-left: -125px;
 	padding: 25px 80px;
+	&:after{
+    	content: "";
+    	position: absolute;
+    	width: 13px;
+    	height: 13px;
+    	display: block;
+    	background: url('../img/Sprite/css_sprites.png') -20px -73px;
+    	top: 50%;
+    	left: 80%;
+    	margin-top: -7px;
+    }
+
 }
 
 .mainContent__videoReviewCaption{
@@ -479,6 +527,18 @@ font-style: normal;
 	font-weight: 500;
 	color: #fff;
 	margin-top: 25px;
+	position: relative;
+	&:after{
+    	content: "";
+    	position: absolute;
+    	width: 18px;
+    	height: 13px;
+    	display: block;
+    	background: url('../img/Sprite/css_sprites.png') -20px -20px;
+    	top: 50%;
+    	left: 200px;
+    	margin-top: -6px;
+    }
 }
 
 .mainContent__callForm{
@@ -503,7 +563,22 @@ font-style: normal;
 .mainContent__callFormInput[type="submit"]{
 	
 	left: 270px;
-
+	
+}
+.mainContent__callFormInputWrap{
+	position: relative;
+	height: 69px;
+	&:after{
+    	content: "";
+    	position: absolute;
+    	width: 20px;
+    	height: 20px;
+    	display: block;
+    	background: url('../img/Sprite/css_sprites.png') -20px -126px;
+    	top: 50%;
+    	right: 5%;
+    	margin-top: -10px;
+    }
 }
 /****************************************** Section services ******************/
 
@@ -607,15 +682,26 @@ font-style: normal;
 	font-size: 48px;
 	line-height: 52px;
 	color: #fff;
+	
+	
 }
 
+.mainContent__bookItHeading--viberIcon{
+	display: inline-block;
+	height: 57px;
+    display: block;
+    background: url('../img/Sprite/viber (1).png')   no-repeat;
+    background-position: 230px top;
+
+
+}
 
 
 .mainContent__bookItFormInput{
 	@extend .btns;
+	
 
-
-    font-size: 18px;
+    
     width: 405px;
 	border-radius: 30px;
     padding: 25px 30px;
@@ -629,6 +715,7 @@ font-style: normal;
 	color: #000;
 	padding: 23px 30px;
 	margin-bottom: 20px;
+	text-transform: none;
 }
 .mainContent__bookItFormInput[name="bookFormText"]{
 	background: #fff;
@@ -636,6 +723,23 @@ font-style: normal;
 	resize: none;
 	overflow: hidden;
 	margin-bottom: 20px;
+	text-transform: none;
+}
+
+.mainContent__bookItInputWrap{
+	position: relative;
+	text-transform: uppercase;
+	&:after{
+    	content: "";
+    	position: absolute;
+    	width: 20px;
+    	height: 20px;
+    	display: block;
+    	background: url('../img/Sprite/css_sprites.png') -20px -126px;
+    	top: 50%;
+    	left: 80%;
+    	margin-top: -10px;
+    }
 }
 
 /****************************************** Section AboutUs**************/
@@ -657,8 +761,42 @@ font-style: normal;
 	font-weight: 600;
 	font-size: 18px;
 	padding-top: 70px;
-	padding-bottom: 110px;
+	padding-right: 20px;
+	margin-bottom: 40px;
+	position: relative;
+	text-align: center;
+	&:before{
+		content:"";
+		display: block;
+		position: absolute;
+		width: 50px;
+		height: 50px;
+		background: url('../img/Sprite/css_sprites.png') -20px -672px;
+		top: 0;
+		left: 50%;
+		margin-left: -25px;
+	}
+
 }
+
+.mainContent__regaliaItem:nth-child(2){
+	&:before{
+		background-position: -20px -834px;
+	}
+}
+
+.mainContent__regaliaItem:nth-child(3){
+	&:before{
+		background-position: -20px -593px;
+	}
+}
+
+.mainContent__regaliaItem:nth-child(4){
+	&:before{
+		background-position: -20px -752px;
+	}
+}
+
 
 .mainContent__regaliaItem--bold{
 	font-weight: bold;
@@ -666,7 +804,7 @@ font-style: normal;
 
 .mainContent__regaliaItem:nth-child(3),
 .mainContent__regaliaItem:nth-child(4){
-	padding-top: 0;
+	margin-bottom: 0;
 	padding-bottom:25px ;
 }
 
@@ -675,7 +813,8 @@ font-style: normal;
 	font-weight: normal;
 	text-align: center;
 	padding: 0;
-	margin-left: -110px;
+	
+	text-align: center;
 }
 
 .mainContent__aboutUsSliderItem{
@@ -772,6 +911,7 @@ font-style: normal;
 	color: #fff;
 	margin: 0; 
 	margin-top: 40px;
+	
 }
 
 .maincontent__tourDetailsList{
@@ -785,8 +925,37 @@ font-style: normal;
 
 .mainContent__tourDetailsItem{
 	margin: 0 15px;
-	padding-top: 60px;
+	padding-top: 45px;
+	margin-top: 30px;
+	position: relative;
+	&:before{
+		content:"";
+		display: block;
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		background: url('../img/Sprite/css_sprites.png') -20px -444px;
+		top: 0;
+		left: 50%;
+		margin-left: -20px;
+	}
 }
+
+
+.mainContent__tourDetailsItem:nth-child(2){
+	
+	&:before{
+		background-position: -20px -516px;
+	}
+}
+
+.mainContent__tourDetailsItem:nth-child(3){
+	
+	&:before{
+		background-position: -10px -374px;
+	}
+}
+
 
 .mainContent__specialOffer--learnMore{
 	@extend .btns;
@@ -895,6 +1064,44 @@ font-style: normal;
 	font-size: 14px;
 }
 
+.mainContent__comeToUsListItem{
+	padding: 0;
+	padding-left: 30px;
+	position: relative;
+	&:before{
+		content:"";
+		width: 30px;
+		height: 25px;
+		display: block;
+		position: absolute;
+		background: url('../img/Sprite/css_sprites.png') -20px -311px;
+		left: 50%;
+		margin-left: -100px;
+		top: 0;
+	}
+}
+
+
+.mainContent__comeToUsListItem:last-child{
+	margin-right: 0;
+	&:before{
+		background-position: -20px -248px;
+	}
+}
+
+.mainContent__comeToUsListItem:nth-child(2){
+	&:before{
+		background-position: -20px -186px;
+	}
+}
+
+
+
+
+
+
+
+
 .mainContent__comeToUsEmailWrap{
 	margin-top: 40px;
 }
@@ -938,87 +1145,5 @@ font-style: normal;
 
 
 
-/*
-.bg-arrow {
-    width: 18px; height: 13px;
-    background: url('css_sprites.png') -20px -20px;
-}
 
-x
-.bg-black_plane {
-    width: 20px; height: 20px;
-    background: url('css_sprites.png') -20px -126px;
-}
 
-x
-.bg-calendar__6_ {
-    width: 37px; height: 37px;
-    background: url('css_sprites.png') -20px -516px;
-}
-
-x
-.bg-call_answer {
-    width: 23px; height: 23px;
-    background: url('css_sprites.png') -20px -311px;
-}
-
-x
-.bg-dollar_symbol {
-    width: 16px; height: 30px;
-    background: url('css_sprites.png') -20px -374px;
-}
-
-x
-.bg-double_king_size_bed__1_ {
-    width: 38px; height: 32px;
-    background: url('css_sprites.png') -20px -444px;
-}
-
-x
-.bg-manager {
-    width: 48px; height: 46px;
-    background: url('css_sprites.png') -20px -834px;
-}
-
-x
-.bg-money_bag_with_dollar_symbol {
-    width: 35px; height: 42px;
-    background: url('css_sprites.png') -20px -752px;
-}
-
-x
-.bg-mts {
-    width: 23px; height: 23px;
-    background: url('css_sprites.png') -20px -248px;
-}
-
-x
-.bg-plane__4_ {
-    width: 40px; height: 40px;
-    background: url('css_sprites.png') -20px -672px;
-}
-
-x
-.bg-play_arrow {
-    width: 13px; height: 13px;
-    background: url('css_sprites.png') -20px -73px;
-}
-
-x
-.bg-pointing_up_arrow {
-    width: 29px; height: 39px;
-    background: url('css_sprites.png') -20px -593px;
-}
-
-x
-.bg-vel {
-    width: 30px; height: 22px;
-    background: url('css_sprites.png') -20px -186px;
-}
-
-x
-.bg-viber__1_ {
-    width: 51px; height: 57px;
-    background: url('css_sprites.png') -20px -920px;
-}
-*/
