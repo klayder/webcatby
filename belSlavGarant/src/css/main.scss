@@ -2,6 +2,7 @@
 @@include("../../bower_components/bootstrap/dist/css/bootstrap.min.css");
 
 
+
 $primary-color: rgba(0,167,169,1);;
 
 
@@ -54,7 +55,7 @@ font-style: normal;
 
 /****************************************** Header ******************/
 
-.mainHeader {
+.mainHeader{
 	background: #fff;
 	color: #000;
 	position: relative;
@@ -69,13 +70,11 @@ font-style: normal;
 	background: #00a99b;
 }
 
-.mainHeader__about {
+.mainHeader__about{
 	padding-top:12px;
 	padding-bottom: 8px;
 	display: flex;
 }
-
-
 
 .mainContent__address{
 	font-family: 'Montserrat';
@@ -91,10 +90,11 @@ font-style: normal;
 
 .mainHeader__phoneListItem{
 	padding: 0;
-	padding-left: 30px;
-	margin-right: 30px;
+	padding-left: 33px;
+	margin-right: 27px;
 	min-width: 140px;
-	}
+}
+
 .mainHeader__phoneListItem:last-child {
 	margin-right: 0;
 }
@@ -123,7 +123,6 @@ font-style: normal;
 }
 
 .mainHeader__phoneListItem:last-child .mainHeeader__phoneItem--link{
-	
 	&:before{
 		background-position: -20px -239px;
 	}
@@ -148,20 +147,23 @@ font-style: normal;
 
 	.mainHeeader__phoneItem--link{
 		font-size: 0;
-		&:hover{
-			font-size: 21px;
-		}
 	}
 	.mainHeader__phoneListItem--code{
 		font-size: 0;
-		
 	}
 
-
 	.mainHeader__phoneListItem{
+		transition: all 0.5s;
 		width: 0;
 		min-width: 0;
+		overflow: hidden;
+		max-height: 30px;
+	}
+}
 
+@media (max-width: 1200px) and (min-width: 450px){
+	
+	.mainHeader__phoneListItem{
 		&:hover{
 			min-width: 160px;
 			.mainHeader__phoneListItem--code{
@@ -183,12 +185,10 @@ font-style: normal;
 	.mainHeader__about{
 		width: 100px;
 	}
-
-
 }
 
-
 /****************************************** Section time to travel ******************/
+
 .mainContent__timeToTravel{
 	padding-top: 245px;
 	background: $primary-color url("../img/bg-about.jpg") no-repeat top center;
@@ -196,11 +196,9 @@ font-style: normal;
 	margin-bottom: 90px;
 }
 
-
 .mainContent__mainHeadingWrap{
 	background: rgba(0,169,155,.82);	
 	padding-bottom: 5px;
-
 }
 
 .mainContent__mainHeading{
@@ -209,10 +207,7 @@ font-style: normal;
 	text-transform: uppercase;
 	color: #fff;
 	text-align: center;
-	
 }
-
-
 
 .btns{
 	font-family: 'Montserrat';	
@@ -248,17 +243,6 @@ font-style: normal;
     }
 }
 
-@media (max-width: 770px){
-	.mainContent__mainHeading{
-		font-size: 50px;
-	}
-	.mainContent__timeToTravel{
-		padding-top: 100px;
-	}
-	.mainContent__popupBtn{
-		margin-top: 150px;
-	}
-}
 .mainContent__popupBtn:hover {
     opacity: 0.9;
     cursor: pointer;
@@ -327,8 +311,38 @@ font-style: normal;
 		border: 1px solid transparent;
 		opacity: 0.9;
    		cursor: pointer;
-
 	}
+}
+
+@media (max-width: 770px){
+	.mainContent__timeToTravel{
+			background-size: cover;
+	}
+	.mainContent__mainHeading{
+		font-size: 50px;
+	}
+	.mainContent__timeToTravel{
+		padding-top: 70px;
+	}
+	.mainContent__popupBtn{
+		margin-top: 250px;
+	}
+	
+}
+@media (max-width: 697px){
+	.mainContent__whoAreWeHeading--name{
+		margin-top: 0;
+	}
+}
+@media (max-width: 500px){
+	.mainContent__whoAreWe{
+		padding-top:  30px;
+		padding-bottom: 15px;
+	}
+	.mainContent__whoAreWeHeading{
+		font-size: 16px;
+	}
+	
 }
 
 /****************************************** Section gallery ******************/
@@ -422,7 +436,7 @@ font-style: normal;
 }
 
 .mainContent__timeToChooseQuestion{
-	display: none;
+	/*display: none;*/
 }
 
 .mainContent__timeToChooseQuestion--active{
@@ -562,7 +576,7 @@ font-style: normal;
 }
 
 .mainContent__textReviwWrap{
-	max-height: 415px;
+	
 	
 	background: #fff;
 	text-align: left;
@@ -598,6 +612,10 @@ font-style: normal;
 		background: linear-gradient(to bottom, transparent 153px,#009e91 150px,#009e91);
 		
 	}
+}
+
+.mainContent__textReviwWrap article{
+	max-height: 275px;
 }
 
 .mainContent__textReviewOrigin{

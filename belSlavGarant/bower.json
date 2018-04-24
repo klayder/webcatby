@@ -19,5 +19,6 @@
     "normalize-css": "normalize.css#^7.0.0",
     "reset-css": "^3.0.0",
     "bootstrap": "^4.1.0"
-  }
+  },
+  "devDependencies": {}
 }
