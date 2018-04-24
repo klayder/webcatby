@@ -20,5 +20,7 @@
     "reset-css": "^3.0.0",
     "bootstrap": "^4.1.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "jquery-nice-select": "^1.1.0"
+  }
 }

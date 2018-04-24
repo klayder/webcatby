@@ -1,7 +1,7 @@
 @@include("../../bower_components/reset-css/reset.css");
 @@include("../../bower_components/bootstrap/dist/css/bootstrap.min.css");
 
-
+@@include("../../bower_components/jquery-nice-select/css/nice-select.css");
 
 $primary-color: rgba(0,167,169,1);;
 
@@ -54,6 +54,10 @@ font-style: normal;
 
 
 /****************************************** Header ******************/
+
+html,body{
+	min-width: 320px;
+}
 
 .mainHeader{
 	background: #fff;
@@ -215,12 +219,16 @@ font-style: normal;
     font-size: 16px;
     text-transform: uppercase;
     color: #fff;
-	background-image: linear-gradient(90deg,#ffc000  0%,#fe210e  100%);	
+	background: linear-gradient(90deg,#ffc000  0%,#fe210e  100%);	
 	border-radius: 60px;
     outline: none;
     border: none;
     display: block;
-	box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.47);}
+	box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.47);
+	&:hover{
+		background: linear-gradient(90deg,#ffe000  0%,#fe410e  100%);
+	}
+}
 
 .mainContent__popupBtn{
 	@extend .btns;
@@ -230,6 +238,9 @@ font-style: normal;
     padding: 25px 90px;
     margin-top: 200px;
     position: relative;
+    z-index: 1;
+    overflow: hidden;
+	
     &:after{
     	content: "";
     	position: absolute;
@@ -240,12 +251,16 @@ font-style: normal;
     	top: 50%;
     	left: 80%;
     	margin-top: -10px;
+    	transition: all 1s;
     }
+
 }
 
 .mainContent__popupBtn:hover {
-    opacity: 0.9;
-    cursor: pointer;
+    
+    &:after{
+    	left: 120%;
+    }
 }
 
 .mainContent__whoAreWe{
@@ -297,7 +312,65 @@ font-style: normal;
 	cursor: pointer;
 	&:hover{
 		border: 1px solid #00bbbd;
+		background: #fff;
 	}
+	&::-webkit-input-placeholder{
+    	color: #000;
+    }
+}
+
+
+.mainContent__questionFormSelect{
+	font-family: 'Montserrat';	
+	font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-radius: 60px;
+    outline: none;
+    border: none;
+    box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.47);
+    height: auto;
+    padding: 12px 30px;
+    margin-bottom: 15px;
+    
+    .current{
+    	padding: 0;
+    	display: block;
+    	max-width: 200px;
+    	
+    }
+    .list{
+    	
+    	width: 80%;
+    	left: 10%;
+		background: transparent;
+    	
+    }
+    .option:first-child{
+    	display: none;
+    }
+    .option{
+    	border-radius: 60px;
+    	background: #fff;
+    	padding: 12px 30px;
+    	border-radius: 60px;
+    	border: 1px solid grey;
+    }
+    &:after{
+
+    	left: 50%;
+    	margin-left: -6px;
+    	top: 100%;
+    	margin-top: -20px;
+    	border-bottom: 3px solid #999;
+   		border-right: 3px solid #999;
+   		width: 12px;
+   		height: 12px;
+   		border-radius: 4px;
+    }
+
+	
+    
 }
 
 .mainContent__questionFormInput[name="whenCall"]{
@@ -306,6 +379,7 @@ font-style: normal;
 }
 
 .mainContent__questionFormInput[type="submit"]{
+	color: #fff;
 	background: linear-gradient(90deg,#ffc000  0%,#fe210e  100%);
 	&:hover{
 		border: 1px solid transparent;
