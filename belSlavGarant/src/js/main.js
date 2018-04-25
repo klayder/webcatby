@@ -1,6 +1,8 @@
 @@include("../../bower_components/jquery/dist/jquery.min.js");
 @@include("../../node_modules/nicescroll/dist/jquery.nicescroll.min.js");
 @@include("../../bower_components/jquery-nice-select/js/jquery.nice-select.min.js");
+@@include("../../bower_components/slick-carousel/slick/slick.js");
+
 
 
 

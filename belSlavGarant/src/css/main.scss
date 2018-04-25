@@ -1,7 +1,7 @@
 @@include("../../bower_components/reset-css/reset.css");
 @@include("../../bower_components/bootstrap/dist/css/bootstrap.min.css");
-
 @@include("../../bower_components/jquery-nice-select/css/nice-select.css");
+@@include("../../bower_components/slick-carousel/slick/slick-theme.scss");
 
 $primary-color: rgba(0,167,169,1);;
 
@@ -531,15 +531,7 @@ html,body{
 }
 
 
-@media (max-width: 770px){
-	.mainContent__reviews{
-		max-height: 1139px;
-	}
 
-	.mainContent__videoReviewWrap:last-child{
-		margin-top: 0;
-	}
-}
 
 
 
@@ -553,12 +545,6 @@ html,body{
 	&:after{
 		bottom: -20px;
 		background: #fff;
-	}
-}
-
-@media (max-width: 770px){
-	.mainContent__reviewsHeading{
-		font-size: 30px;
 	}
 }
 
@@ -583,13 +569,13 @@ html,body{
 	width: 100%;
 	height: 288px;
 	border: none;
-	background: $primary-color url(../img/bg-videoReview.jpg) no-repeat top left;
+	background: $primary-color url(../img/bg-videoReview.jpg) no-repeat top center;
 	background-size: cover;
 	display: block;
 	cursor: pointer;
 	&:hover{
 		background:  linear-gradient(90deg,rgba(0,167,169,0.6)  0%, rgba(0,167,169,0.6)  100%),
-		url(../img/bg-videoReview.jpg) no-repeat top left 
+		url(../img/bg-videoReview.jpg) no-repeat top center; 
 		; 
 	}
 }
@@ -623,6 +609,9 @@ html,body{
     }
 
 }
+
+
+
 
 .mainContent__videoReviewCaption{
 	margin-top: 25px;
@@ -671,7 +660,7 @@ html,body{
 		top:0;
 		right:0;
 		margin-right: -4px;
-		background: linear-gradient(to bottom, transparent 153px,#009e91 150px,#009e91);
+		background: linear-gradient(to bottom, transparent 151px,#009e91 150px,#009e91);
 		
 	}
 	&:before{
@@ -683,7 +672,7 @@ html,body{
 		top:0;
 		left:0;
 		margin-left: -4px;
-		background: linear-gradient(to bottom, transparent 153px,#009e91 150px,#009e91);
+		background: linear-gradient(to bottom, transparent 151px,#009e91 150px,#009e91);
 		
 	}
 }
@@ -709,6 +698,50 @@ html,body{
 .mainContent__reviewOriginLink:hover{
 	text-decoration: none;
 	color: rgba(0,167,169,.6);
+}
+
+@media(max-width: 992px){
+	.mainContent__reviews{
+		max-height: 1182px;
+	}
+
+	.mainContent__videoReviewWrap:last-child{
+		margin-top: 0;
+	}
+}
+
+@media (max-width: 793px){
+	.mainContent__videoReviewsItem:last-child .mainContent__videoReviewWrap,
+	.mainContent__videoReviewsItem:last-child .mainContent__videoReviewWrap{
+		margin: 0;
+	}
+}
+
+@media (max-width: 770px){
+	.mainContent__reviewsHeading{
+		font-size: 30px;
+	}
+	.mainContent__reviews{
+		max-height: 1137px;
+	}
+
+}
+
+
+@media (max-width: 540px){
+	.mainContent__videoReviewBtn{
+		padding: 25px 60px;
+	}
+	.mainContent__videoReviewCaption{
+		font-size: 14px;
+		font-weight: 600;
+	}
+}
+
+@media(max-width: 450px){
+	.mainContent__reviews{
+		max-height: 1172px;
+	}
 }
 
 /****************************************** Section call ******************/
