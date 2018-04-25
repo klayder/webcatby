@@ -8,7 +8,7 @@
 
 
 $(document).ready( function(){
-  console.log("Hi! JQuery work!");
+ 
   $("body").niceScroll();
   $(".mainContent__textReviwWrap article").niceScroll();
   $('select').niceSelect();
@@ -26,6 +26,49 @@ $(document).ready( function(){
   		$(".modal__screen").removeClass("popup__form--show");
   	});
   });
+
+  let questions=$(".mainContent__timeToChooseQuestion"),
+      questionsCont=questions.length,
+      qurrentQuestion=1,
+      selectorQuestion=".mainContent__timeToChooseQuestion:nth-child("+qurrentQuestion+")",
+      //selectorAnsferField=".mainContent__questionFormInput:nth-child("+qurrentQuestion+")",
+      question=$(selectorQuestion);
+     // ansferField=$(selectorAnsferField),
+      ansfers=$(".mainContent__glleryItem"),
+      inputsForQuestions=$(".mainContent__questionFormInput");
+      console.log( inputsForQuestions.eq(0).classList);
+      
+
+
+
+      ansfers.click((evt)=>{
+          evt.preventDefault();
+          let clickedElem=$(evt.target),
+              ansfer;
+          if(clickedElem.hasClass("mainContent__galleryBtn")){
+              ansfer=clickedElem.text();
+          } else{
+            ansfer=$(clickedElem.find(".mainContent__galleryBtn")).text();
+          }
+           console.log(ansfer);
+           question.removeClass("mainContent__timeToChooseQuestion--active");
+           qurrentQuestion++;
+           
+           selectorQuestion=".mainContent__timeToChooseQuestion:nth-child("+qurrentQuestion+")";
+           question=$(selectorQuestion);
+           question.addClass("mainContent__timeToChooseQuestion--active");
+           if(qurrentQuestion>4){
+              qurrentQuestion=1;
+              ansfers.off();
+           }
+           
+           
+      });
+
+
+
+
+
 
 
   

@@ -120,7 +120,7 @@ html,body{
 		height: 25px;
 		display: block;
 		position: absolute;
-		background: url('../img/Sprite/css_sprites.png') -20px -363px;
+		background: url('../img/Sprite/css_sprites.png') -20px -426px;
 		left: -32px;
 		top: 0;
 	}
@@ -134,7 +134,7 @@ html,body{
 
 .mainHeader__phoneListItem:nth-child(2) .mainHeeader__phoneItem--link{
 	&:before{
-		background-position: -20px -426px;
+		background-position: -20px -363px;
 	}
 }
 
@@ -285,6 +285,7 @@ html,body{
 	width: 212px;
 	height: 64px;
 	margin-top: -15px;
+	margin-left: 15px;
 	vertical-align: middle;
 	background: transparent url("../img/mc-logoMouzenidis.png");
 }
@@ -387,6 +388,13 @@ html,body{
    		cursor: pointer;
 	}
 }
+
+@media (min-width: 992px){
+	.mainContent__timeToTravel{
+		height: 91vh;
+	}
+}
+
 
 @media (max-width: 770px){
 	.mainContent__timeToTravel{
@@ -510,7 +518,7 @@ html,body{
 }
 
 .mainContent__timeToChooseQuestion{
-	/*display: none;*/
+	display: none;
 }
 
 .mainContent__timeToChooseQuestion--active{
@@ -648,32 +656,31 @@ html,body{
 	font-size: 17px;
 	position: relative;
 	z-index: 2;
-	border-bottom: 4px solid #009e91;
-	
-	
+		
 	&:after{
 		content:"";
-		width:4px;
+		width:102%;
 		height: 101%;
 		display: block;
 		position: absolute;
 		top:0;
 		right:0;
-		margin-right: -4px;
+		margin-right: -1%;
 		background: linear-gradient(to bottom, transparent 151px,#009e91 150px,#009e91);
+		z-index: -2;
 		
 	}
+
 	&:before{
 		content:"";
-		width:4px;
-		height: 101%;
+		width:100%;
+		height: 100%;
 		display: block;
 		position: absolute;
 		top:0;
 		left:0;
-		margin-left: -4px;
-		background: linear-gradient(to bottom, transparent 151px,#009e91 150px,#009e91);
-		
+		background: #fff;
+		z-index:-1;
 	}
 }
 
@@ -753,7 +760,7 @@ html,body{
 	padding-top: 90px;
 	min-height: 275px;
 	background: $primary-color url("../img/bg-call.jpg") no-repeat top center;
-	background-size: 100% auto;
+	background-size: 100% 100%;
 	position: relative;
 }
 
@@ -814,7 +821,7 @@ html,body{
 	padding-right: 70px;
 	color: #000;
 	position: absolute;
-	left: 0;
+	left: -75px;
 	z-index:1;	
 }
 
@@ -826,8 +833,11 @@ html,body{
 }
 .mainContent__callFormInputWrap{
 	position: relative;
-	height: 69px;
+	max-height: 69px;
+	height: 100%;
 	padding-right: 40px;
+	
+
 	&:after{
     	content: "";
     	position: absolute;
@@ -837,9 +847,70 @@ html,body{
     	background: url('../img/Sprite/css_sprites.png') -20px -179px;
     	top: 50%;
     	right: 5%;
-    	margin-top: -10px;
+    	margin-top: 25px;
+    	z-index: 2;
+
+    }
+    &:hover{
+    	&:after{
+    		
+    	}
     }
 }
+
+@media(max-width: 1200px){
+	.mainContent__call{
+		padding-bottom: 60px;
+	}
+	.mainContent__callContent{
+		display: none;
+	}
+	.mainContent__callFormInput[type="text"]{
+		left: -75px;
+		z-index:1;	
+	}
+}
+
+@media(max-width: 767px){
+	.mainContent__call{
+		text-align: center;
+		&:before{
+			display: none;
+		}
+	}
+	.mainContent__callFormInput[type="text"]{
+		left: -55px;
+	}
+	
+}
+
+@media(max-width: 575px){
+
+	.mainContent__callFormInput[type="submit"],
+	.mainContent__callFormInput[type="text"]{
+		position: static;
+	}
+	.mainContent__callFormInput[type="text"]{
+		order: -2;
+	}
+	.mainContent__callFormInputWrap{
+		padding: 0;
+		height:auto;
+		max-height: none;
+		display: flex;
+		flex-direction: column;
+		
+	}
+	.mainContent__callFormInput{
+		display: block;
+	}
+
+}
+
+
+
+
+
 /****************************************** Section services ******************/
 
 .mainContent__services{
@@ -994,8 +1065,10 @@ html,body{
 }
 
 .mainContent__bookItInputWrap{
+	display: inline-block;
 	position: relative;
 	text-transform: uppercase;
+	overflow: hidden;
 	&:after{
     	content: "";
     	position: absolute;
@@ -1004,9 +1077,45 @@ html,body{
     	display: block;
     	background: url('../img/Sprite/css_sprites.png') -20px -179px;
     	top: 50%;
-    	left: 80%;
+    	left: 90%;
     	margin-top: -10px;
+    	transition: all 0.5s;
     }
+    &:hover{
+    	&:after{
+    		top: -10%;
+    		left: 120%;
+    	}
+    }
+}
+
+@media(max-width: 992px){
+	.mainContent__bookItFormWrap{
+		margin-top: 40px;
+	}
+	
+}
+
+@media(max-width: 550px){
+	.mainContent__bookItHeading{
+		font-size: 36px;
+		padding-left: 10px;
+		
+	}
+	.mainContent__bookItHeading--viberIcon{
+		background-position: 190px top;
+	}
+	.mainContent__bookItFormInput{
+		width: 100%;
+	}
+	.mainContent__bookItInputWrap{
+		width: 100%;
+	}
+
+	.mainContent__bookIt::before{
+			display: none;
+	}
+
 }
 
 /****************************************** Section AboutUs**************/
@@ -1135,8 +1244,14 @@ html,body{
 	margin-bottom: 0;
 }
 
-.row{
 
+
+@media(max-width: 768px){
+	.mainContent__diplomasListItem,
+	.mainContent__diplomasListItem:last-child{
+		padding: 0;
+	}
+	
 }
 
 /****************************************** Section specialOffer**************/
@@ -1157,7 +1272,6 @@ html,body{
 		position: absolute;
 		bottom: 0;
 		right: 10%;
-
 		background: url("../img/bg-manAndChildren.png");
 
 	}
@@ -1168,6 +1282,7 @@ html,body{
 
 .mainContent__specialOfferTour{
 	text-align: center;
+	z-index:2;
 }
 
 .mainContent__specialOfferHeading{
@@ -1246,19 +1361,38 @@ html,body{
 	width: 100%;
 }
 
+@media(max-width: 950px){
+	.mainContent__specialOffer{
+		&:after{
+			right: -10%;
+			opacity: .75;
+		}
+		
+	}
+	
+}
+
+
 /****************************************** Section specialOffer**************/
 
 .mainContent__comeToUs{
 	font-family: 'Montserrat';
 	padding-top: 90px;
 	position:relative;
-	position: relative;
+	
 }
 
 .mainContent__comeToUsHeading{
 	@extend .mainContent__timeToChooseHeading;
 	margin-bottom: 90px;
 }
+
+.mainContent__comeToUsMap{
+	height: 413px;
+	width: 77%;
+	float: right;
+}
+
 
 .mainContent__comeToUsMap--openMapBtn{
 	width: 100%;
@@ -1332,14 +1466,13 @@ html,body{
 	vertical-align: top;
 	&:hover{
 		text-decoration: none;
-		font-size: 26px;
-		color: #fff;
+		text-shadow: 1px 1px 2px  2px $primary-color;
 	}
 }
 
 .mainContent__comeToUsTelehonesList{
 	margin: 0;
-	margin-top: 30px;
+	margin-top: 25px;
 }
 
 .mainContent__comeToUsListItem--code{
@@ -1393,10 +1526,37 @@ html,body{
 	color: #fff;
 	&:hover{
 		text-decoration: none;
-		font-size: 20px;
-		color: #fff;
+		text-shadow: 0px 0px 2px  10px $primary-color;
 	}
 }
+
+
+@media(max-width: 950px){
+	.mainContent__comeToUsAddress{
+		
+		font-size: 18px;
+		text-align: right;
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+	.mainContent__comeToUsEmailWrap{
+		margin-left: -50px;
+	}
+	
+}
+
+@media(max-width: 650px){
+	.mainContent__comeToUsAddress{
+		
+	}
+	.mainContent__comeToUsEmail{
+		font-family: inherit;
+		font-weight: bold;
+		font-size: 15px;	
+	}
+}
+
+
 
 /****************************************** Footer**************/
 .mainFooter{
