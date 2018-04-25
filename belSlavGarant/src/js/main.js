@@ -36,7 +36,7 @@ $(document).ready( function(){
      // ansferField=$(selectorAnsferField),
       ansfers=$(".mainContent__glleryItem"),
       inputsForQuestions=$(".mainContent__questionFormInput");
-      console.log( inputsForQuestions.eq(0).classList);
+      
       
 
 
@@ -45,12 +45,14 @@ $(document).ready( function(){
           evt.preventDefault();
           let clickedElem=$(evt.target),
               ansfer;
+          
           if(clickedElem.hasClass("mainContent__galleryBtn")){
               ansfer=clickedElem.text();
           } else{
             ansfer=$(clickedElem.find(".mainContent__galleryBtn")).text();
           }
            console.log(ansfer);
+           $(inputsForQuestions.get(qurrentQuestion-1)).val(ansfer);
            question.removeClass("mainContent__timeToChooseQuestion--active");
            qurrentQuestion++;
            
