@@ -62,7 +62,10 @@ html,body{
 .mainHeader{
 	background: #fff;
 	color: #000;
-	position: relative;
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
 	box-sizing: border-box;
 }
 
@@ -167,45 +170,6 @@ html,body{
 }
 
 
-/*
-@media (max-width: 1200px){
-	.mainHeader__contacts{
-		width: auto;
-	}
-
-	.mainHeeader__phoneItem--link{
-		font-size: 0;
-	}
-	.mainHeader__phoneListItem--code{
-		font-size: 0;
-	}
-
-	.mainHeader__phoneListItem{
-		transition: all 0.5s;
-		width: 0;
-		min-width: 0;
-		overflow: hidden;
-		max-height: 30px;
-	}
-}*/
-/*
-@media (max-width: 1200px) and (min-width: 450px){
-	
-	.mainHeader__phoneListItem{
-		&:hover{
-			min-width: 160px;
-			.mainHeader__phoneListItem--code{
-				font-size: 14px;
-			}
-			.mainHeeader__phoneItem--link{
-				font-size: 18px;
-		
-			}
-		}
-	}
-	
-}
-*/
 @media (max-width: 480px){
 	.mainContent__address{
 		display: none;
@@ -213,31 +177,36 @@ html,body{
 	.mainHeader__about{
 		width: 100px;
 	}
+	.mainHeader__phoneList{
+		margin:0;
+	}
 }
 
 /****************************************** Section time to travel ******************/
 
 .mainContent__timeToTravel{
-	padding-top: 245px;
 	background: $primary-color url("../img/bg-about.jpg") no-repeat top center;
 	background-size: 100% 100%;
-	margin-bottom: 90px;
 }
 
 .mainContent__mainScreen{
-	min-height: calc(100vh - 447px);
-	box-sizing: border-box;
+	height: 100vh;
+	min-height: 680px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 
 .mainContent__mainHeadingWrap{
 	background: rgba(0,169,155,.82);	
-	padding-bottom: 5px;
+	padding: 15px 30px;
+	
 }
 
 .mainContent__mainHeading{
 	font-family: 'Gagalin';
-	font-size: 70px;
+	font-size: 80px;
 	text-transform: uppercase;
 	color: #fff;
 	text-align: center;
@@ -264,9 +233,9 @@ html,body{
 	@extend .btns;
     
     margin: 0 auto;
+    margin-top: 320px;
 	font-size: 18px;
     padding: 25px 90px;
-    margin-top: 320px;
     position: relative;
     z-index: 1;
     overflow: hidden;
@@ -297,7 +266,6 @@ html,body{
 	text-align: center;
 	background:url("../img/bg-about2.jpg") no-repeat top center rgba(0,169,155,.82);
 	background-size: 100% 100%;
-	margin-top:90px;
 	color: #fff;
 	padding-top: 100px;
 	padding-bottom: 75px;
@@ -421,65 +389,70 @@ html,body{
 
 
 @media (max-width: 1280px){
-	.mainContent__mainScreen{
-		min-height: calc(100vh - 447px);
-		box-sizing: border-box;
-	}	
-	.mainContent__timeToTravel{
-		background-position-y:-50px;
-		padding-top: 90px;
-	}
-	.mainContent__popupBtn {
-		margin-top: 260px;
-	}
-}
-
-@media (max-width: 770px){
-	.mainContent__timeToTravel{
-			background-size: cover;
-	}
-	.mainContent__mainHeading{
-		font-size: 50px;
-	}
-	.mainContent__timeToTravel{
-		padding-top: 70px;
-	}
-	.mainContent__popupBtn{
-		margin-top: 250px;
-	}
 	
 }
 
-@media (max-width: 697px){
-	.mainContent__whoAreWeHeading--name{
-		margin-top: 0;
-	}
-}
-@media (max-width: 500px){
+@media (max-width: 712px){
 	.mainContent__whoAreWe{
-		padding-top:  30px;
-		padding-bottom: 15px;
+		padding-top: 60px;
+		padding-bottom: 30px;
 	}
-	.mainContent__whoAreWeHeading{
-		font-size: 16px;
+	.mainContent__whoAreWeHeading--name{
+       margin-top: 0px;
+	}
+}
+
+@media (max-width: 532px){
+	.mainContent__mainHeading{
+		font-size: 35px;
+	}
+	.mainContent__popupBtn{
+	   	
+    	margin-top: 310px;
+    	font-size: 12px;
+	}
+	.mainContent__timeToTravel{
+		background-size: auto 90%;
+	}
+	.mainContent__mainScreen{
+		min-height: 540px;
+	}
+	
+	.mainContent__mainHeadingWrap{
+		margin-top: 60px;
+	}
+}
+
+@media (max-width: 477px){
+	.mainContent__whoAreWeHeading {
+		font-size: 21px;
+	}
+}
+
+@media (max-width: 375px){
+	.mainContent__mainHeading{
+		font-size: 26px;
+	}
+	.mainContent__popupBtn{
+	   	margin-top: 180px;
+    }
+	.mainContent__timeToTravel{
+		background-size: auto 75%;
+	}
+	.mainContent__mainScreen{
+		min-height: 580px;
+	}
+	
+	.mainContent__mainHeadingWrap{
+		margin-top: 100px;
 	}
 	
 }
 
-@media (max-width: 425px){
-	
+@media (max-width: 320px){
 	.mainContent__mainHeading{
-		font-size: 30px;
+		font-size: 22px;
 	}
-	
-	.mainContent__popupBtn{
-		margin-top: 295px;
-	}
-	.mainContent__mainScreen{
-		min-height: calc(100vh - 300px);
-		box-sizing: border-box;
-	}	
-	
 }
 
 
@@ -496,6 +469,7 @@ html,body{
 	color: #00a7a9;
 	position: relative;
 	margin:0;
+	padding-top: 90px;
 
 	&:after{
 		content: "";
@@ -567,6 +541,9 @@ html,body{
 	margin-top: -30px;
 	z-index: 2;
 	padding: 20px 10px;
+	width: 70%;
+	margin-left: 15%;
+
 }
 
 .mainContent__fotowrap:hover .mainContent__galleryBtn{
@@ -582,7 +559,32 @@ html,body{
 	display: block;
 }
 
+@media(max-width: 991px){
+	.mainContent__glleryItem{
+		height: auto;
+	}
+	.mainContent__glleryFoto{
+		display: none;
+	}
+	.mainContent__galleryBtn{
+		
+		position: static;
+		margin: 0 auto;
+		width: 300px;
+		
+	}
+	.mainContent__fotowrap:hover::after {
+		display: none;
+	}
+}
 
+@media(max-width: 531px){
+	.mainContent__timeToChooseHeading{
+		font-size: 28px;
+		padding-top: 60px;
+	}
+
+}
 
 /****************************************** Section review ******************/
 .mainContent__reviews{
@@ -590,7 +592,7 @@ html,body{
 	text-align: center;
 	background: #3abeb1 url("../img/bg-review.jpg") top center no-repeat;
 	background-size: cover;
-	max-height: 883px;
+	max-height: 884px;
 	padding-bottom: 190px;
 	
 }
@@ -784,10 +786,12 @@ html,body{
 
 @media (max-width: 770px){
 	.mainContent__reviewsHeading{
-		font-size: 30px;
+		font-size: 22px;
+		padding-top: 60px;
+		padding-bottom: 30px;
 	}
 	.mainContent__reviews{
-		max-height: 1139px;
+		max-height: 1109px;
 	}
 
 }
@@ -805,7 +809,7 @@ html,body{
 
 @media(max-width: 450px){
 	.mainContent__reviews{
-		max-height: 1172px;
+		max-height: 1111px;
 	}
 }
 
@@ -828,7 +832,7 @@ html,body{
 	height: 370px;
 	display: block;
 	position: absolute;
-	background: url(../img/bg-manCall.png);
+	background: url(../img/bg-manCall.png) no-repeat;
 	bottom: 0px;
 }
 
@@ -903,7 +907,6 @@ html,body{
     	height: 20px;
     	display: block;
     	background: url('../img/Sprite/css_sprites.png') -20px -179px;
-    	top: 50%;
     	right: 5%;
     	margin-top: 25px;
     	z-index: 2;
@@ -930,7 +933,13 @@ html,body{
 }
 
 @media(max-width: 767px){
+	.mainContent__callHeading{
+		font-size: 22px;
+		padding-bottom: 30px;
+	}
+
 	.mainContent__call{
+		padding-top: 60px;
 		text-align: center;
 		&:before{
 			display: none;
@@ -944,9 +953,19 @@ html,body{
 
 @media(max-width: 575px){
 
+	
+
 	.mainContent__callFormInput[type="submit"],
 	.mainContent__callFormInput[type="text"]{
 		position: static;
+		padding: 15px 60px;
+		
+	}
+	.mainContent__callFormInputWrap{
+			&:after{
+		    	margin-top: 17px;
+    	}
+
 	}
 	.mainContent__callFormInput[type="text"]{
 		order: -2;
@@ -961,10 +980,19 @@ html,body{
 	}
 	.mainContent__callFormInput{
 		display: block;
+		margin-bottom: 10px;
+	}
+	.mainContent__callFormInputWrap{
+		&:after{
+			top:50%;
+		}
 	}
 
 }
 
+@media(max-width: 460px){
+	
+}
 
 
 
@@ -973,7 +1001,7 @@ html,body{
 
 .mainContent__services{
 	text-align: center;	
-	padding-top: 90px;
+	
 
 }
 
@@ -1038,12 +1066,10 @@ html,body{
 	
 }
 
-.mainContent__servicesListItem:nth-child(5) .mainContent__servicesListItem--heading{
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
 
 @media(max-width: 992px) and (min-width: 768px){
+	
+	
 	.mainContent__servicesListItem:nth-child(3) .mainContent__servicesListItem--heading{
 		padding-top: 10px;
 		padding-bottom: 10px;
@@ -1051,13 +1077,22 @@ html,body{
 	
 }
 
-@media(max-width: 768px) {
-	.mainContent__servicesListItem:nth-child(5) .mainContent__servicesListItem--heading{
-		padding-top: 15px;
-		padding-bottom: 15px;
-	}
+@media(min-width: 767px) {
 	
+	.mainContent__servicesListItem:nth-child(5) .mainContent__servicesListItem--heading{
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
 }
+@media(max-width: 768px){
+.mainContent__servicesHeading{
+		font-size: 22px;
+		margin-bottom: 60px;
+	}
+}
+
+
 
 /****************************************** Section BookIt**************/
 
@@ -1079,7 +1114,7 @@ html,body{
 	top: 0;
 	left: 50%;
 	margin-left: -315px;
-	margin-top: -327px;
+	margin-top: -347px;
 
 	background: url(../img/bg-bookItGirl.png);
 }
@@ -1170,6 +1205,9 @@ html,body{
 }
 
 @media(max-width: 550px){
+	.mainContent__bookIt{
+		margin-top: 90px;
+	}
 	.mainContent__bookItHeading{
 		font-size: 36px;
 		padding-left: 10px;
@@ -1187,6 +1225,9 @@ html,body{
 
 	.mainContent__bookIt::before{
 			display: none;
+	}
+	.mainContent__bookItFormInput{
+		font-size: 12px;
 	}
 
 }
@@ -1267,8 +1308,8 @@ html,body{
 }
 
 .mainContent__aboutUsSliderItem{
-	min-width:320px;
-	
+	min-width:300px;
+
 }
 
 .mainContent__aboutUsImg{
@@ -1291,7 +1332,6 @@ html,body{
 .mainContent__diplomasListItem{
 	max-height: 240px;
 	overflow: hidden;
-	
 }
 
 .mainContent__diplomasListItem{
@@ -1320,13 +1360,16 @@ html,body{
 
 
 @media(max-width: 768px){
+
 	.mainContent__aboutUsSliderItem{
-	padding: 0;
+		padding: 0;
+
 	
 }
 	.mainContent__diplomasListItem,
 	.mainContent__diplomasListItem:last-child{
 		padding: 0;
+		margin-bottom: 30px;
 	}
 	
 }
@@ -1344,12 +1387,12 @@ html,body{
 	&:after{
 		content:"";
 		display: block;
-		width: 380px;
-		height: 492px;
+		width: 570px;
+		height: 552px;
 		position: absolute;
 		bottom: 0;
 		right: 10%;
-		background: url("../img/bg-manAndChildren.png");
+		background: url("../img/shutterstock_476860684.png");
 
 	}
 	
@@ -1449,18 +1492,26 @@ html,body{
 		    opacity: .75;
 		    width: 300px;
 		    height: 352px;
-		    top: 94px;
+		    top: 184px;
 		}
 		
 	}
 	
 }
 @media(max-width: 768px){
+	.mainContent__specialOffer{
+		margin-top: 60px;
+	}
+
 	.mainContent__comeToUsHeading,
 	.mainContent__aboutUsHeading,
 		.mainContent__specialOfferHeading{
 			font-size: 24px;
 		}
+	.mainContent__comeToUsHeading,
+	.mainContent__aboutUsHeading{
+		padding-top: 0px;
+	}
 }
 
 @media(max-width: 412px){
@@ -1666,9 +1717,24 @@ html,body{
 }
 
 @media(max-width: 650px){
-	.mainContent__comeToUsAddress{
-		
+	iframe{
+		display: none;
 	}
+	
+	.mainContent__comeToUsContacts{
+		width: 120%;
+		&:after{
+			right: -10px;
+		}
+	}
+
+	.mainContent__comeToUs{
+		overflow: hidden;
+	}
+
+
+
+
 	.mainContent__comeToUsEmail{
 		font-family: inherit;
 		font-weight: bold;
@@ -1825,9 +1891,8 @@ html,body{
 	padding-top: 45px;
 	padding-bottom: 35px;
 	text-align: center;
-	min-width: 320px;
-	max-width: 470px;
-	width: 50%;
+	width: 470px;
+	
 	border-width: 5px;
   	border-color: rgb(0, 167, 169);
   	border-style: solid;
@@ -1839,6 +1904,7 @@ html,body{
  	top: 20%;
  	z-index: 50;
  	display: none;
+ 	box-sizing: border-box;
 }
 
 .popup__form--show{
@@ -1866,4 +1932,61 @@ html,body{
 
 .popup__formInput[type="submit"]{
 	width: 70%;
+}
+
+.popup__closeBtn{
+	display: block;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: none;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    &:before{
+    	content:"";
+    	display: block;
+    	width: 100%;
+    	height: 6px;
+    	border-radius: 4px;
+    	background:rgb(0, 167, 169);
+    	position: absolute;
+    	top: 50%;
+    	left:0;
+    	margin-top: -2px;
+    	transform: rotate(45deg);
+    }
+    &:after{
+    	content:"";
+    	display: block;
+    	width: 100%;
+    	height: 6px;
+    	border-radius: 4px;
+    	background:rgb(0, 167, 169);
+    	position: absolute;
+    	top: 50%;
+    	left:0;
+    	margin-top: -2px;
+    	transform: rotate(-45deg);
+    }
+}
+
+@media(max-width: 470px){
+	.popup__form{
+		width: 320px;
+		height: 80%;
+		top:10%;
+		margin-left: -160px;
+	}
+
+}
+
+
+.thanksWrap{
+	width: 100vw;
+	height: 100vh;
+	background: url("../img/bg-about.jpg") no-repeat;
+	background-size: 100% 100%;
+
 }

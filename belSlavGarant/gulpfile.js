@@ -90,6 +90,7 @@ gulp.task("css:build",function(){
 		.pipe(fileInclude())
 		.pipe(sass())
 		.pipe(prefixer())
+		.pipe(cssmin())
 		.pipe(sourcemaps.write())
 		.pipe(gulp.dest(path.build.css))
 		.pipe(reload({stream:true}));

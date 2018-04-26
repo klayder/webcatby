@@ -14,23 +14,82 @@ $(document).ready( function(){
   $(".mainContent__textReviwWrap article").niceScroll();
   $('select').niceSelect();
 
-  $(".mainContent__popupBtn").click((evt)=>{
-  	
-  	evt.preventDefault();
-  	$(".modal__screen").addClass("popup__form--show");
-  	$(".popup__form").addClass("popup__form--show");
-  	
-  	$(document).keydown((evt)=>{
-  		if(evt.which == 27){
-  			$(".modal__screen").removeClass("popup__form--show");
-  			$(".popup__form").removeClass("popup__form--show");
-  		}
-  	});
-  	$(".modal__screen").click((evt)=>{
-  		$(".modal__screen").removeClass("popup__form--show");
-  		$(".popup__form").removeClass("popup__form--show");
-  	});
+
+$(".popup__thanks--goBack").click((evt)=>{
+    document.location.replace("../index.html");
+});
+
+
+$( "#myForm" ).submit(function( event ) {
+  document.location.replace("../thanks.html");
+  event.preventDefault();
+});
+
+$( "#formQuestion" ).submit(function( event ) {
+  document.location.replace("../thanks.html");
+  event.preventDefault();
+});
+
+$( "#formCall" ).submit(function( event ) {
+  document.location.replace("../thanks.html");
+  event.preventDefault();
+});
+
+$( "#formViber" ).submit(function( event ) {
+  document.location.replace("../thanks.html");
+  event.preventDefault();
+});
+
+
+
+  $(".mainContent__specialOffer--learnMore").click((evt)=>{
+    evt.preventDefault();
+    openPopup();
+    addListeners();
   });
+
+  $(".mainContent__popupBtn").click((evt)=>{
+  	evt.preventDefault();
+  	openPopup();
+  	addListeners();
+  });
+
+
+  function openThanks(){
+    $(".modal__screen").addClass("popup__form--show");
+    $(".popup__thanks").addClass("popup__form--show");
+  }
+
+  function openPopup(){
+    $(".modal__screen").addClass("popup__form--show");
+    $(".popup__form").addClass("popup__form--show");
+  }
+
+  function closePopup(){
+    $(".modal__screen").removeClass("popup__form--show");
+    $(".popup__form").removeClass("popup__form--show");
+  }
+
+  function addListeners(){
+    $(document).keydown((evt)=>{
+      if(evt.which == 27){
+        closePopup();
+      }
+    });
+
+    $(".modal__screen").click((evt)=>{
+      closePopup();
+    });
+
+    $(".popup__closeBtn").click((evt)=>{
+      closePopup();
+    });
+  }
+
+
+
+
+
 
   let questions=$(".mainContent__timeToChooseQuestion"),
       questionsCont=questions.length,
@@ -101,7 +160,4 @@ var telInp = $('input[name="clientNumber"]');
 			range.select();
 		}
 	};
-
-
-  
 });
