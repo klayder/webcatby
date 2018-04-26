@@ -18,7 +18,8 @@
     "jquery": "^3.3.1",
     "normalize-css": "normalize.css#^7.0.0",
     "reset-css": "^3.0.0",
-    "bootstrap": "^4.1.0"
+    "bootstrap": "^4.1.0",
+    "jquery.maskedinput": "^1.4.1"
   },
   "devDependencies": {
     "jquery-nice-select": "^1.1.0",

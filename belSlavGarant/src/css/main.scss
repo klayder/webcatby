@@ -120,7 +120,7 @@ html,body{
 		height: 25px;
 		display: block;
 		position: absolute;
-		background: url('../img/Sprite/css_sprites.png') -20px -426px;
+		background: url('../img/Sprite/css_sprites.png') -16px -426px;
 		left: -32px;
 		top: 0;
 	}
@@ -134,7 +134,7 @@ html,body{
 
 .mainHeader__phoneListItem:nth-child(2) .mainHeeader__phoneItem--link{
 	&:before{
-		background-position: -20px -363px;
+		background-position: -16px -363px;
 	}
 }
 
@@ -144,6 +144,30 @@ html,body{
 	vertical-align: top;
 }
 
+@media (max-width: 991px){
+	.mainHeeader__phoneItem--link{
+		font-size: 16px;
+		&:before{
+			left: -40px;
+			top: -5px;
+		}
+	}
+	.mainHeader__phoneListItem--code{
+		font-size: 12px;
+	}
+	.mainHeader__phoneList{
+		flex-direction: column;
+	}
+	.mainHeader__phoneListItem{
+		margin-bottom: 10px;
+	}
+	.mainHeader__about {
+    	padding-top: 30px;
+	}
+}
+
+
+/*
 @media (max-width: 1200px){
 	.mainHeader__contacts{
 		width: auto;
@@ -163,8 +187,8 @@ html,body{
 		overflow: hidden;
 		max-height: 30px;
 	}
-}
-
+}*/
+/*
 @media (max-width: 1200px) and (min-width: 450px){
 	
 	.mainHeader__phoneListItem{
@@ -181,8 +205,8 @@ html,body{
 	}
 	
 }
-
-@media (max-width: 770px){
+*/
+@media (max-width: 480px){
 	.mainContent__address{
 		display: none;
 	}
@@ -199,6 +223,12 @@ html,body{
 	background-size: 100% 100%;
 	margin-bottom: 90px;
 }
+
+.mainContent__mainScreen{
+	min-height: calc(100vh - 447px);
+	box-sizing: border-box;
+}
+
 
 .mainContent__mainHeadingWrap{
 	background: rgba(0,169,155,.82);	
@@ -236,7 +266,7 @@ html,body{
     margin: 0 auto;
 	font-size: 18px;
     padding: 25px 90px;
-    margin-top: 200px;
+    margin-top: 320px;
     position: relative;
     z-index: 1;
     overflow: hidden;
@@ -389,12 +419,20 @@ html,body{
 	}
 }
 
-@media (min-width: 992px){
+
+@media (max-width: 1280px){
+	.mainContent__mainScreen{
+		min-height: calc(100vh - 447px);
+		box-sizing: border-box;
+	}	
 	.mainContent__timeToTravel{
-		height: 91vh;
+		background-position-y:-50px;
+		padding-top: 90px;
+	}
+	.mainContent__popupBtn {
+		margin-top: 260px;
 	}
 }
-
 
 @media (max-width: 770px){
 	.mainContent__timeToTravel{
@@ -411,6 +449,7 @@ html,body{
 	}
 	
 }
+
 @media (max-width: 697px){
 	.mainContent__whoAreWeHeading--name{
 		margin-top: 0;
@@ -426,6 +465,24 @@ html,body{
 	}
 	
 }
+
+@media (max-width: 425px){
+	
+	.mainContent__mainHeading{
+		font-size: 30px;
+	}
+	
+	.mainContent__popupBtn{
+		margin-top: 295px;
+	}
+	.mainContent__mainScreen{
+		min-height: calc(100vh - 300px);
+		box-sizing: border-box;
+	}	
+	
+}
+
+
 
 /****************************************** Section gallery ******************/
 
@@ -533,7 +590,7 @@ html,body{
 	text-align: center;
 	background: #3abeb1 url("../img/bg-review.jpg") top center no-repeat;
 	background-size: cover;
-	max-height: 885px;
+	max-height: 883px;
 	padding-bottom: 190px;
 	
 }
@@ -659,13 +716,12 @@ html,body{
 		
 	&:after{
 		content:"";
-		width:102%;
-		height: 101%;
-		display: block;
-		position: absolute;
-		top:0;
-		right:0;
-		margin-right: -1%;
+		width: calc(100% + 10px);
+    	height: calc(100% + 5px);
+    	display: block;
+   	 	position: absolute;
+    	top: 0px;
+    	right: -5px;
 		background: linear-gradient(to bottom, transparent 151px,#009e91 150px,#009e91);
 		z-index: -2;
 		
@@ -711,7 +767,9 @@ html,body{
 	.mainContent__reviews{
 		max-height: 1182px;
 	}
-
+	.mainContent__videoReviewsItem:first-child .mainContent__videoReviewWrap {
+	    margin-right: 0;
+	}
 	.mainContent__videoReviewWrap:last-child{
 		margin-top: 0;
 	}
@@ -729,7 +787,7 @@ html,body{
 		font-size: 30px;
 	}
 	.mainContent__reviews{
-		max-height: 1137px;
+		max-height: 1139px;
 	}
 
 }
@@ -981,9 +1039,24 @@ html,body{
 }
 
 .mainContent__servicesListItem:nth-child(5) .mainContent__servicesListItem--heading{
-	padding-top: 15px;
-	padding-bottom: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
 
+@media(max-width: 992px) and (min-width: 768px){
+	.mainContent__servicesListItem:nth-child(3) .mainContent__servicesListItem--heading{
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	
+}
+
+@media(max-width: 768px) {
+	.mainContent__servicesListItem:nth-child(5) .mainContent__servicesListItem--heading{
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+	
 }
 
 /****************************************** Section BookIt**************/
@@ -1044,7 +1117,7 @@ html,body{
       
 }
 
-.mainContent__bookItFormInput[name="bookFormViber"]{
+.mainContent__bookItFormInput[name="clientNumber"]{
 	background: #fff;
 	color: #000;
 	padding: 23px 30px;
@@ -1247,6 +1320,10 @@ html,body{
 
 
 @media(max-width: 768px){
+	.mainContent__aboutUsSliderItem{
+	padding: 0;
+	
+}
 	.mainContent__diplomasListItem,
 	.mainContent__diplomasListItem:last-child{
 		padding: 0;
@@ -1363,15 +1440,58 @@ html,body{
 
 @media(max-width: 950px){
 	.mainContent__specialOffer{
+		overflow: hidden;
+	}
+
+	.mainContent__specialOffer{
 		&:after{
-			right: -10%;
-			opacity: .75;
+			right: 0%;
+		    opacity: .75;
+		    width: 300px;
+		    height: 352px;
+		    top: 94px;
 		}
 		
 	}
 	
 }
+@media(max-width: 768px){
+	.mainContent__comeToUsHeading,
+	.mainContent__aboutUsHeading,
+		.mainContent__specialOfferHeading{
+			font-size: 24px;
+		}
+}
 
+@media(max-width: 412px){
+		
+	.mainContent__tourDetailsItem {
+    	margin: 0 5px;
+    	margin-top: 30px;
+	}
+}
+
+
+@media(max-width: 375px){
+		
+		.mainContent__specialOffer{
+			&:after{
+				
+			    top: 197px;
+			}
+			
+		}
+}
+
+@media(max-width: 350px){
+		.mainContent__specialOffer{
+			&:after{
+				
+			    display:none;
+			}
+			
+		}
+}
 
 /****************************************** Section specialOffer**************/
 

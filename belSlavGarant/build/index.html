@@ -13,13 +13,13 @@
 	<header class="mainHeader">
 		<div class="mainHeader__wrap container">
 			<div class="row justify-content-between">
-				<section class="mainHeader__about col-md-5">
+				<section class="mainHeader__about col-5">
 					<a  class="mainHeader__logo" href="#">
 						<img src="img/hd-logo.png" width="99" height="69" alt="">
 					</a>
 					<p class="mainContent__address">г. Минск, ул.Л.Беды 39,<br> 1-й этаж, пом. 135</p>
 				</section>
-				<section class="mainHeader__contacts col-lg-6  col-md-5">
+				<section class="mainHeader__contacts ">
 					<ul class="mainHeader__phoneList row justify-content-end">
 						<li class="mainHeader__phoneListItem">
 							<a class="mainHeeader__phoneItem--link" href="tel:+375172161125">
@@ -47,14 +47,15 @@
 	</header>
 	<main class="mainContent">
 		<div class="mainContent__timeToTravel">
-				<div class="container">
-					<div class="mainContent__mainHeadingWrap col-md-10 offset-md-1">
+				<div class="mainContent__mainScreen">
+					<div class="mainContent__mainHeadingWrap">
 						<h1 class="mainContent__mainHeading">пора отдыхать в турции!</h1>
 					</div>
+					<button class="mainContent__popupBtn ">
+						Я хочу в Турцию!
+					</button>
 				</div>
-				<button class="mainContent__popupBtn ">
-					Я хочу в Турцию!
-				</button>
+					
 				<article class="mainContent__whoAreWe">
 					<h2 class="mainContent__whoAreWeHeading">Мы - уполномоченное агенство <span class="mainContent__whoAreWeHeading--name"></span></h2>
 					<p class="mainContentwhoAreWeDescription">А это значит - хорошие цены и эксклюзивные туры!</p>
@@ -319,7 +320,7 @@
 									col-sm-11 offset-sm-1" action="">
 							<div class="mainContent__callFormInputWrap">
 								<input class="mainContent__callFormInput" type="submit" value="Подобрать тур" >
-								<input class="mainContent__callFormInput" type="text" placeholder="Ваш номер" name="phoneNumber">
+								<input class="mainContent__callFormInput" type="text" placeholder="Ваш номер" name="clientNumber">
 							</div>
 						</form>
 					</div>
@@ -380,7 +381,7 @@
 										col-lg-5 offset-lg-1
 										offset-md-2">
 							<form class="mainContent__bookItForm" action="get" >
-								<input  class="mainContent__bookItFormInput" name="bookFormViber" type="text" placeholder="Ваш номер Viber">
+								<input  class="mainContent__bookItFormInput" name="clientNumber" type="text" placeholder="Ваш номер Viber">
 								<textarea class="mainContent__bookItFormInput" name="bookFormText" rows="3" placeholder="Как хотите отдохнуть"></textarea>
 								<div class="mainContent__bookItInputWrap">
 									<input class="mainContent__bookItFormInput"  type="submit" value="Получить подборку 3х туров">
@@ -536,7 +537,7 @@
 		<form action="">
 			<h2 class="popup__formHeading">Заполните форму</h2>
 			<input class="popup__formInput" placeholder="Ваше имя" type="text" name="name" >
-			<input class="popup__formInput" placeholder="Ваш телефон" type="text" name="number" >
+			<input class="popup__formInput" placeholder="Ваш телефон" type="text" name="clientNumber" >
 			<input class="popup__formInput" placeholder="Количество человек" type="text" name="persons" >
 			<input class="popup__formInput" placeholder="Сколько *" type="text" name="summ" >
 			<input class="popup__formInput" type="submit">
