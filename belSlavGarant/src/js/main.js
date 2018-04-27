@@ -1,7 +1,7 @@
 @@include("../../bower_components/jquery/dist/jquery.min.js");
 @@include("../../node_modules/nicescroll/dist/jquery.nicescroll.min.js");
 @@include("../../bower_components/jquery-nice-select/js/jquery.nice-select.min.js");
-@@include("../../bower_components/slick-carousel/slick/slick.js");
+@@include("../../bower_components/slick-carousel/slick/slick.min.js");
 @@include("../../bower_components/jquery.maskedinput/dist/jquery.maskedinput.min.js");
 
 
@@ -9,10 +9,15 @@
 
 
 $(document).ready( function(){
+
+  if($(window).width() > 1024) {
+    console.log($(window).width())
+    $("body").niceScroll();
+    $(".mainContent__textReviwWrap article").niceScroll();
+    $('select').niceSelect();
+  }
  
-  $("body").niceScroll();
-  $(".mainContent__textReviwWrap article").niceScroll();
-  $('select').niceSelect();
+  
 
 
 $(".popup__thanks--goBack").click((evt)=>{
@@ -39,7 +44,6 @@ $( "#formViber" ).submit(function( event ) {
   document.location.replace("../thanks.html");
   event.preventDefault();
 });
-
 
 
   $(".mainContent__specialOffer--learnMore").click((evt)=>{

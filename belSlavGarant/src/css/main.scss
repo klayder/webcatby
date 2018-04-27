@@ -233,7 +233,7 @@ html,body{
 	@extend .btns;
     
     margin: 0 auto;
-    margin-top: 320px;
+    //margin-top: 320px;
 	font-size: 18px;
     padding: 25px 90px;
     position: relative;
@@ -387,12 +387,20 @@ html,body{
 	}
 }
 
-
-@media (max-width: 1280px){
-	
+.mainContent__mainScreen{ 
+	padding-top: 10vh; 
+} 
+.mainContent__popupBtn{ 
+	margin-top: 40vh; 
 }
 
-@media (max-width: 712px){
+@media (max-width: 768px){
+	.mainContent__mainHeading{
+		font-size: 60px;
+	}
+	.mainContent__popupBtn{ 
+		margin-top: 30vh; 
+	}
 	.mainContent__whoAreWe{
 		padding-top: 60px;
 		padding-bottom: 30px;
@@ -400,16 +408,33 @@ html,body{
 	.mainContent__whoAreWeHeading--name{
        margin-top: 0px;
 	}
+	.mainHeader__phoneListItem:first-child{
+		display: none;
+	}
+	.mainHeader__about {
+    	padding-top: 5px;
+	}
+	.mainHeader__contacts {
+    	padding-top: 23px;
+	}
+	.mainHeader__phoneListItem:last-child{
+		margin-bottom: 0;
+	}
+	.mainContent__address{
+		margin-bottom: 5px;
+	}
+	
 }
 
 @media (max-width: 532px){
+	
+	
 	.mainContent__mainHeading{
-		font-size: 35px;
+		font-size: 30px;
 	}
+
 	.mainContent__popupBtn{
-	   	
-    	margin-top: 310px;
-    	font-size: 12px;
+	   	font-size: 12px;
 	}
 	.mainContent__timeToTravel{
 		background-size: auto 90%;
@@ -434,7 +459,7 @@ html,body{
 		font-size: 26px;
 	}
 	.mainContent__popupBtn{
-	   	margin-top: 180px;
+	   	//margin-top: 180px;
     }
 	.mainContent__timeToTravel{
 		background-size: auto 75%;
@@ -444,7 +469,7 @@ html,body{
 	}
 	
 	.mainContent__mainHeadingWrap{
-		margin-top: 100px;
+		//margin-top: 100px;
 	}
 	
 }
@@ -709,6 +734,7 @@ html,body{
 	
 	
 	background: #fff;
+	border: red;
 	text-align: left;
 	padding: 40px 35px 30px 20px;
 	font-weight: normal;

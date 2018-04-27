@@ -77,21 +77,21 @@ gulp.task("html:build",function(){
 gulp.task("js:build",function(){
 	gulp.src(path.src.js)
 		.pipe(fileInclude())
-		.pipe(sourcemaps.init())
+		//.pipe(sourcemaps.init())
 		.pipe(uglify())
-		.pipe(sourcemaps.write())
+		//.pipe(sourcemaps.write())
 		.pipe(gulp.dest(path.build.js))
 		.pipe(reload({stream:true}));
 });
 
 gulp.task("css:build",function(){
 	gulp.src(path.src.css)
-		.pipe(sourcemaps.init())
+		//.pipe(sourcemaps.init())
 		.pipe(fileInclude())
 		.pipe(sass())
 		.pipe(prefixer())
 		.pipe(cssmin())
-		.pipe(sourcemaps.write())
+		//.pipe(sourcemaps.write())
 		.pipe(gulp.dest(path.build.css))
 		.pipe(reload({stream:true}));
 });
