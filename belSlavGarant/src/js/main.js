@@ -1,7 +1,7 @@
 @@include("../../bower_components/jquery/dist/jquery.min.js");
 @@include("../../node_modules/nicescroll/dist/jquery.nicescroll.min.js");
 @@include("../../bower_components/jquery-nice-select/js/jquery.nice-select.min.js");
-@@include("../../bower_components/slick-carousel/slick/slick.min.js");
+@@include("slick.min.js");
 @@include("../../bower_components/jquery.maskedinput/dist/jquery.maskedinput.min.js");
 
 
@@ -11,38 +11,48 @@
 $(document).ready( function(){
 
   if($(window).width() > 1024) {
-    console.log($(window).width())
+    
     $("body").niceScroll();
     $(".mainContent__textReviwWrap article").niceScroll();
     $('select').niceSelect();
   }
  
+
+
+
+$(".mainContent__servicesListItem--heading").click((evt)=>{
+  evt.preventDefault();
+  let message="Набор для отдыха: "+$(evt.target).text();
+  $(".mainContent__questionFormInput:first-child").val(message);
+  openPopup();
+
+
   
 
-
-$(".popup__thanks--goBack").click((evt)=>{
-    document.location.replace("../index.html");
+});
+$(".popup__closeBtn").click((evt)=>{
+  evt.preventDefault();
+  closePopup();
 });
 
 
-$( "#myForm" ).submit(function( event ) {
-  document.location.replace("../thanks.html");
-  event.preventDefault();
-});
 
-$( "#formQuestion" ).submit(function( event ) {
-  document.location.replace("../thanks.html");
-  event.preventDefault();
-});
 
-$( "#formCall" ).submit(function( event ) {
-  document.location.replace("../thanks.html");
-  event.preventDefault();
-});
-
-$( "#formViber" ).submit(function( event ) {
-  document.location.replace("../thanks.html");
-  event.preventDefault();
+$('.mainContent__textReviewsList').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    autoplaySpeed: 7000,
+    responsive: [{
+        breakpoint: 992,
+        settings: {
+            dots: true,
+            arrows: false,
+            autoplay: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+        }
+    }]
 });
 
 

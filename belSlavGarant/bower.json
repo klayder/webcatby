@@ -22,7 +22,6 @@
     "jquery.maskedinput": "^1.4.1"
   },
   "devDependencies": {
-    "jquery-nice-select": "^1.1.0",
-    "slick-carousel": "^1.8.1"
+    "jquery-nice-select": "^1.1.0"
   }
 }

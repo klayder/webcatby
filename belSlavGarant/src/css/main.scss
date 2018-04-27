@@ -1,9 +1,10 @@
 @@include("../../bower_components/reset-css/reset.css");
 @@include("../../bower_components/bootstrap/dist/css/bootstrap.min.css");
 @@include("../../bower_components/jquery-nice-select/css/nice-select.css");
-@@include("../../bower_components/slick-carousel/slick/slick-theme.scss");
+@@include("slick.scss");
+@@include("slick-theme.scss");
 
-$primary-color: rgba(0,167,169,1);;
+$primary-color: rgba(0,167,169,1);
 
 
 @font-face{
@@ -100,6 +101,7 @@ html,body{
 	padding-left: 33px;
 	margin-right: 27px;
 	min-width: 140px;
+
 }
 
 .mainHeader__phoneListItem:last-child {
@@ -160,6 +162,7 @@ html,body{
 	}
 	.mainHeader__phoneList{
 		flex-direction: column;
+		margin-right: 0;
 	}
 	.mainHeader__phoneListItem{
 		margin-bottom: 10px;
@@ -177,16 +180,13 @@ html,body{
 	.mainHeader__about{
 		width: 100px;
 	}
-	.mainHeader__phoneList{
-		margin:0;
-	}
 }
 
 /****************************************** Section time to travel ******************/
 
 .mainContent__timeToTravel{
 	background: $primary-color url("../img/bg-about.jpg") no-repeat top center;
-	background-size: 100% 100%;
+	background-size: cover;
 }
 
 .mainContent__mainScreen{
@@ -319,6 +319,8 @@ html,body{
 }
 
 
+
+
 .mainContent__questionFormSelect{
 	font-family: 'Montserrat';	
 	font-weight: bold;
@@ -329,7 +331,8 @@ html,body{
     border: none;
     box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.47);
     height: auto;
-    padding: 12px 30px;
+    padding: 20px 30px;
+    background: #fff;
     margin-bottom: 15px;
     
     .current{
@@ -338,22 +341,29 @@ html,body{
     	max-width: 200px;
     	
     }
+
+    
+
     .list{
     	
     	width: 80%;
     	left: 10%;
-		background: transparent;
+		background: #fff;
+		margin-top: 0;
     	
     }
     .option:first-child{
     	display: none;
     }
     .option{
-    	border-radius: 60px;
-    	background: #fff;
-    	padding: 12px 30px;
-    	border-radius: 60px;
-    	border: 1px solid grey;
+    	padding: 10px 20px;
+    	border-bottom: 1px solid rgba(69,69,69,.33);
+    	font-family: Montserrat;
+    	font-weight: 700;
+    	font-size: 16px;
+    	&:hover{
+    		color: #ffb239;
+    	}
     }
     &:after{
 
@@ -394,6 +404,14 @@ html,body{
 	margin-top: 40vh; 
 }
 
+@media (max-width: 1024px){
+	.mainContent__questionFormInput,
+	.mainContent__questionFormInput[name="whenCall"]{
+		border: 1px solid rgba(69,69,69,.33);
+	}
+
+}
+
 @media (max-width: 768px){
 	.mainContent__mainHeading{
 		font-size: 60px;
@@ -430,7 +448,7 @@ html,body{
 	
 	
 	.mainContent__mainHeading{
-		font-size: 30px;
+		font-size: 40px;
 	}
 
 	.mainContent__popupBtn{
@@ -456,7 +474,7 @@ html,body{
 
 @media (max-width: 375px){
 	.mainContent__mainHeading{
-		font-size: 26px;
+		font-size: 30px;
 	}
 	.mainContent__popupBtn{
 	   	//margin-top: 180px;
@@ -476,7 +494,7 @@ html,body{
 
 @media (max-width: 320px){
 	.mainContent__mainHeading{
-		font-size: 22px;
+		font-size: 30px;
 	}
 }
 
@@ -500,7 +518,7 @@ html,body{
 		content: "";
 		height: 3px;
 		width: 100%;
-		bottom: -20px;
+		bottom: -10px;
 		width: 88px;
 		left: 50%;
 		margin-left: -44px;
@@ -525,29 +543,34 @@ html,body{
 
 .mainContent__glleryItem{
 	height: 265px;
+	overflow: hidden;
 }
 
 .mainContent__glleryFoto{
 	width: 100%;
-	height: 100%;
+	height: auto;
+
 }
 
 .mainContent__fotowrap{
 	position: relative;
 	width: 100%;
 	height: 100%;
+	overflow: hidden;
+
+	
 }
 
 .mainContent__fotowrap:hover::after {
 	content:"";
 	width: 100%;
-	height: 100%;
+	height: 265px;
 	display: block;
 	position: absolute;
 	background: rgba(0,167,169,0.6);
 	top:0;
 	left: 0;
-	cursor: pointer;
+	
 }
 
 
@@ -617,7 +640,6 @@ html,body{
 	text-align: center;
 	background: #3abeb1 url("../img/bg-review.jpg") top center no-repeat;
 	background-size: cover;
-	max-height: 884px;
 	padding-bottom: 190px;
 	
 }
@@ -713,22 +735,20 @@ html,body{
 	font-size: 18px;
 	font-weight: 600;
 }
+/**********************************************************/
 
 .mainContent__textReviewsItem{
 	min-width: 320px;
+	//border: 1px solid red;
+
 }
 
-.mainContent__textReviewsItem:first-child{
-	padding-left: 7px;
+.mainContent__textReviwWrap{
+		margin: 0 auto;
 }
+/*******************************************************/
 
-.mainContent__textReviewsItem:last-child{
-	padding-right: 7px;
-}
 
-.mainContent__textReviewsList{
-	padding-top: 8px;
-}
 
 .mainContent__textReviwWrap{
 	
@@ -741,16 +761,16 @@ html,body{
 	font-size: 17px;
 	position: relative;
 	z-index: 2;
-		
+	
 	&:after{
 		content:"";
-		width: calc(100% + 10px);
+		width: calc( 100% + 8px);
     	height: calc(100% + 5px);
     	display: block;
    	 	position: absolute;
     	top: 0px;
     	right: -5px;
-		background: linear-gradient(to bottom, transparent 151px,#009e91 150px,#009e91);
+		background: linear-gradient(to bottom, transparent 150px,#009e91 150px,#009e91);
 		z-index: -2;
 		
 	}
@@ -768,9 +788,7 @@ html,body{
 	}
 }
 
-.mainContent__textReviwWrap article{
-	max-height: 275px;
-}
+
 
 .mainContent__textReviewOrigin{
 	display: inline-block;
@@ -791,16 +809,17 @@ html,body{
 	color: rgba(0,167,169,.6);
 }
 
+
+
 @media(max-width: 992px){
-	.mainContent__reviews{
-		max-height: 1182px;
-	}
+	
 	.mainContent__videoReviewsItem:first-child .mainContent__videoReviewWrap {
 	    margin-right: 0;
 	}
 	.mainContent__videoReviewWrap:last-child{
 		margin-top: 0;
 	}
+	
 }
 
 @media (max-width: 793px){
@@ -816,10 +835,6 @@ html,body{
 		padding-top: 60px;
 		padding-bottom: 30px;
 	}
-	.mainContent__reviews{
-		max-height: 1109px;
-	}
-
 }
 
 
@@ -833,18 +848,85 @@ html,body{
 	}
 }
 
-@media(max-width: 450px){
-	.mainContent__reviews{
-		max-height: 1111px;
-	}
+
+
+/*Рабочие правки*/
+ .mainContent__textReviewsList{
+ 	
+ 	display: flex;
+ 	align-items: flex-start;
+ 	flex-wrap: wrap;
+ 	justify-content: space-between;
+ 	margin-left: -15px;
+ 	margin-right: -15px;
+ 	position: relative;
+ 	margin-top: -150px;
+ 	margin-bottom: 20px;
+ }
+ .mainContent__textReviewsItem{
+ 	width: 33.3333%;
+ 	padding: 0 15px 20px;
+ }
+ .mainContent__textReviwWrap{
+	 	min-height: 200px;
+ }
+ .mainContent__textReviwWrap:before{
+ 	display: none;
+ }
+
+ .mainContent__textReviwWrap:after{
+ 	position: absolute;
+ 	top: 142px;
+ 	left: -4px;
+ 	right: -4px;
+ 	height: calc(100% - 138px);
+ 	background-color: #009e91 ;
+ 	z-index: -1;
+ }
+ .mainContent__textReviwWrap{
+ 	z-index: auto;
+ }
+ .mainContent__textReviwWrap article{
+ 	max-height: 1000px;
+ 	overflow: inherit !important;
+ }
+
+.mainContent__textReviwWrap:after {
+width: calc( 100% + 8px); 
 }
+
+/***************************************************/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /****************************************** Section call ******************/
 
 
 .mainContent__call{
 
-	margin-top: 330px;
+	margin-top: 60px;
 	padding-top: 90px;
 	min-height: 275px;
 	background: $primary-color url("../img/bg-call.jpg") no-repeat top center;
@@ -1202,7 +1284,7 @@ html,body{
 	display: inline-block;
 	position: relative;
 	text-transform: uppercase;
-	overflow: hidden;
+	
 	&:after{
     	content: "";
     	position: absolute;
@@ -1213,12 +1295,13 @@ html,body{
     	top: 50%;
     	left: 90%;
     	margin-top: -10px;
-    	transition: all 0.5s;
+    	transition: all 1s;
     }
     &:hover{
     	&:after{
     		top: -10%;
-    		left: 120%;
+    		left: 300%;
+
     	}
     }
 }
@@ -1226,6 +1309,16 @@ html,body{
 @media(max-width: 992px){
 	.mainContent__bookItFormWrap{
 		margin-top: 40px;
+	}
+	.mainContent__bookIt{
+		padding-top: 60px;
+		padding-bottom:  60px;
+	}
+	.mainContent__bookItHeading{
+		font-size: 29px;
+	}
+	.mainContent__bookItForm{
+		margin-top: 10px;
 	}
 	
 }
@@ -1235,7 +1328,7 @@ html,body{
 		margin-top: 90px;
 	}
 	.mainContent__bookItHeading{
-		font-size: 36px;
+		
 		padding-left: 10px;
 		
 	}
@@ -1510,18 +1603,18 @@ html,body{
 @media(max-width: 950px){
 	.mainContent__specialOffer{
 		overflow: hidden;
+		padding-top: 0;
+		padding-bottom: 75px;
+		&:after{
+			    right: 0;
+			    opacity: .75;
+			    width: 440px;
+			    height: 496px;
+			    top: 0px;
+		}
 	}
 
-	.mainContent__specialOffer{
-		&:after{
-			right: 0%;
-		    opacity: .75;
-		    width: 300px;
-		    height: 352px;
-		    top: 184px;
-		}
-		
-	}
+	
 	
 }
 @media(max-width: 768px){
@@ -1746,26 +1839,34 @@ html,body{
 	iframe{
 		display: none;
 	}
-	
 	.mainContent__comeToUsContacts{
-		width: 120%;
+
+		transform : none;
+		left: 0;
+		width: 100%;
+		height: auto;
+		padding-left: 0;
+		padding-top: 60px;
+		padding-bottom: 60px;
+		background: url("../img/bg-comeToUs.jpg") no-repeat;
+		background-size: 100% 100%;
 		&:after{
-			right: -10px;
+			display: none;
 		}
 	}
-
-	.mainContent__comeToUs{
-		overflow: hidden;
+	.mainContent__comeToUsContacts{
+		
+	}
+	.mainContent__comeToUsEmailWrap{
+		margin-left: 0;
+	}
+	.mainContent__comeToUsAddress{
+		text-align: center;
+	}
+	.mainContent__comeToUsContacts > *{
+		transform: none;
 	}
 
-
-
-
-	.mainContent__comeToUsEmail{
-		font-family: inherit;
-		font-weight: bold;
-		font-size: 15px;	
-	}
 }
 
 
@@ -1910,6 +2011,10 @@ html,body{
 		left:60px;
 		top: 50%;
 		margin-top: -7px;
+	}
+	&:hover{
+		text-decoration: none;
+		color:$primary-color;
 	}
 }
 
