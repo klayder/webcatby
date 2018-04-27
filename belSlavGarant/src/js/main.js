@@ -23,7 +23,8 @@ $(document).ready( function(){
 $(".mainContent__servicesListItem--heading").click((evt)=>{
   evt.preventDefault();
   let message="Набор для отдыха: "+$(evt.target).text();
-  $(".mainContent__questionFormInput:first-child").val(message);
+  $("#popup__formIn").val(message);
+  console.log($(".mainContent__questionFormInput:first-child").val());
   openPopup();
 
 
