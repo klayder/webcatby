@@ -294,6 +294,8 @@ html,body{
 
 }
 
+
+
 .mainContent__questionForm{
 	display: flex;
 	flex-direction: column;
@@ -445,7 +447,10 @@ html,body{
 }
 
 @media (max-width: 532px){
-	
+	.mainContentwhoAreWeDescription span{
+		display: block;
+		text-align: center;
+	}
 	
 	.mainContent__mainHeading{
 		font-size: 40px;
@@ -613,6 +618,10 @@ html,body{
 	}
 	.mainContent__glleryFoto{
 		display: none;
+	}
+	.mainContent__glleryItem,
+	.mainContent__fotowrap{
+		overflow: visible;
 	}
 	.mainContent__galleryBtn{
 		
@@ -1320,7 +1329,26 @@ width: calc( 100% + 8px);
 	.mainContent__bookItForm{
 		margin-top: 10px;
 	}
+	.mainContent__bookItHeadingWrap{
+		text-align: center;
+	}
 	
+	.mainContent__bookItFormInput{
+		margin-left: auto;
+		margin-right: auto;
+		
+	}
+	.mainContent__bookItInputWrap{
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		&:after{
+			display: none;
+		}
+	}
+	.mainContent__bookItHeading--viberIcon{
+		background: transparent;
+	}
 }
 
 @media(max-width: 550px){
@@ -1337,6 +1365,7 @@ width: calc( 100% + 8px);
 	}
 	.mainContent__bookItFormInput{
 		width: 100%;
+
 	}
 	.mainContent__bookItInputWrap{
 		width: 100%;
@@ -1478,8 +1507,10 @@ width: calc( 100% + 8px);
 
 
 
-@media(max-width: 768px){
-
+@media(max-width: 768px) and (min-width: 450px){
+	.mainContent__regaliaItem{
+		font-size: 12px;
+	}
 	.mainContent__aboutUsSliderItem{
 		padding: 0;
 
@@ -1615,7 +1646,16 @@ width: calc( 100% + 8px);
 	}
 
 	
-	
+}
+
+@media(max-width: 992px){
+	.slick-dots li button:before{
+		font-size: 36px;
+
+	}
+	.slick-dots{
+		z-index: 10;
+	}
 }
 @media(max-width: 768px){
 	.mainContent__specialOffer{
@@ -1631,14 +1671,34 @@ width: calc( 100% + 8px);
 	.mainContent__aboutUsHeading{
 		padding-top: 0px;
 	}
+
 }
 
 @media(max-width: 412px){
-		
+		.mainContent__specialOffer{
+			&:after{
+				
+			    display:none;
+			}
+			}
 	.mainContent__tourDetailsItem {
     	margin: 0 5px;
     	margin-top: 30px;
 	}
+	.mainContent__specialOffer--learnMore{
+		font-size: 12px;
+	}
+
+	.maincontent__tourDetailsList {
+        justify-content: space-around;
+    }
+    .maincontent__tourDetailsList li{
+        margin-left:0;
+        margin-right: 0;
+    }
+    .mainContent__specialOfferHeading{
+    	font-size: 22px;
+    }
 }
 
 
@@ -2057,7 +2117,7 @@ width: calc( 100% + 8px);
 	font-size: 15px;
 	font-weight: 500;
 	text-transform: none;
-	padding: 18px 30px;
+	padding: 13px 30px;
 	width: 80%;
 }
 
@@ -2067,8 +2127,8 @@ width: calc( 100% + 8px);
 
 .popup__closeBtn{
 	display: block;
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
     background: transparent;
     border: none;
     position: absolute;
@@ -2106,9 +2166,14 @@ width: calc( 100% + 8px);
 @media(max-width: 470px){
 	.popup__form{
 		width: 320px;
-		height: 80%;
-		top:10%;
+		//height: 85%;
+		top:50%;
 		margin-left: -160px;
+		transform: translateY(-50%);
+
+	}
+	.mainFooter{
+		font-size: 14px;
 	}
 
 }
