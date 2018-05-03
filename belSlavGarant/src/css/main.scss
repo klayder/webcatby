@@ -884,15 +884,24 @@ html,body{
 		&:after{
 			padding: 25px 60px;
 		}
-		&:before{
-			left: 77%;
-		}
+		
 	}
 	
 	.mainContent__videoReviewCaption{
 		font-size: 14px;
 		font-weight: 600;
 	}
+}
+
+
+@media (max-width: 320px){
+	.mainContent__videoReviewBtnWrap{
+		
+		&:before{
+			left: 77%;
+		}
+	}
+	
 }
 
 
