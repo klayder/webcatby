@@ -2,6 +2,7 @@
 @@include("../../node_modules/nicescroll/dist/jquery.nicescroll.min.js");
 @@include("../../bower_components/jquery-nice-select/js/jquery.nice-select.min.js");
 @@include("slick.min.js");
+@@include("jquery.magnific-popup.min.js");
 @@include("../../bower_components/jquery.maskedinput/dist/jquery.maskedinput.min.js");
 
 
@@ -9,6 +10,29 @@
 
 
 $(document).ready( function(){
+
+
+$('.mainContent__videoReviewBtnWrap').magnificPopup({type:'iframe'});
+/*$('.mainContent__videoReviewBtnWrap').magnificPopup({
+  items: {
+       src: 'https://www.youtube.com/watch?v=7eo8XpT4CmM'
+     },
+  type: 'iframe',
+  iframe: {
+        markup: '<div class="mfp-iframe-scaler">'+
+                '<div class="mfp-close"></div>'+
+                '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>'+
+                '</div>', 
+        patterns: {
+            youtube: {
+                index: 'youtube.com/', 
+                id: 'v=', 
+                src: '//www.youtube.com/embed/%id%?autoplay=1' 
+            }
+         },
+         srcAction: 'iframe_src', 
+     }
+});*/
 
   if($(window).width() > 1024) {
     
@@ -19,9 +43,8 @@ $(document).ready( function(){
  
 
 
-
 $(".mainContent__servicesListItem--heading").click((evt)=>{
-  evt.preventDefault();
+  
   let message="Набор для отдыха: "+$(evt.target).text();
   $("#popup__formIn").val(message);
   console.log($(".mainContent__questionFormInput:first-child").val());
@@ -59,6 +82,8 @@ $('.mainContent__textReviewsList').slick({
 
   $(".mainContent__specialOffer--learnMore").click((evt)=>{
     evt.preventDefault();
+    
+    $("#js-popupFormInput").val($(evt.target).text());
     openPopup();
     addListeners();
   });
@@ -132,12 +157,14 @@ $('.mainContent__textReviewsList').slick({
           }
            console.log(ansfer);
            $(inputsForQuestions.get(qurrentQuestion-1)).val(ansfer);
-           question.removeClass("mainContent__timeToChooseQuestion--active");
+           question.fadeOut(700);
+          // question.removeClass("mainContent__timeToChooseQuestion--active");
            qurrentQuestion++;
            
            selectorQuestion=".mainContent__timeToChooseQuestion:nth-child("+qurrentQuestion+")";
            question=$(selectorQuestion);
-           question.addClass("mainContent__timeToChooseQuestion--active");
+           question.fadeIn(1000);
+           //question.addClass("mainContent__timeToChooseQuestion--active");
            if(qurrentQuestion>4){
               qurrentQuestion=1;
               ansfers.off();
@@ -175,4 +202,9 @@ var telInp = $('input[name="clientNumber"]');
 			range.select();
 		}
 	};
+
+
+
+
+
 });

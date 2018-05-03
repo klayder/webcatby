@@ -107,7 +107,7 @@
 					</li>
 					<li class="mainContent__timeToChooseQuestion">
 						<figure class="mainContent__timeToChooseGallery container">
-							<figcaption class="mainContent__chooseGalleryCaption">Вопрос <span class="mainContent__chooseGalleryCaption--cont">2/5</span>Кто Вы?</figcaption>
+							<figcaption class="mainContent__chooseGalleryCaption">Вопрос <span class="mainContent__chooseGalleryCaption--cont">2/5</span>. Кто Вы?</figcaption>
 
 							<ul class="mainContent__galleryList row">
 								<li class="mainContent__glleryItem col-lg-4 p-2">
@@ -264,17 +264,17 @@
 						<ul class="mainContent__videoReviewsList row">
 							<li class="mainContent__videoReviewsItem col-lg-6 p-2">
 								<div class="mainContent__videoReviewWrap">
-									<div class="mainContent__videoReviewBtnWrap">
-										<button class="mainContent__videoReviewBtn">Видеоотзыв</button>
-									</div>
+									<a class="mainContent__videoReviewBtnWrap youtuber" href="https://www.youtube.com/watch?v=5jWJ-vcUrHg">
+										
+									</a>
 									<p class="mainContent__videoReviewCaption">Мария, летала в ноябре 2017 в Турцию </p>
 								</div>
 							</li>
 							<li class="mainContent__videoReviewsItem col-lg-6 p-2">
 								<div class="mainContent__videoReviewWrap">
-									<div class="mainContent__videoReviewBtnWrap">
-										<button class="mainContent__videoReviewBtn">Видеоотзыв</button>
-									</div>
+									<a class="mainContent__videoReviewBtnWrap youtuber" href="https://www.youtube.com/watch?v=5jWJ-vcUrHg">
+										
+									</a>
 									<p class="mainContent__videoReviewCaption">Мария, летала в ноябре 2017 в Турцию </p>
 								</div>
 							</li>
@@ -351,7 +351,7 @@
 									value="Подобрать тур"
 									hidden>
 								<input class="mainContent__callFormInput" type="submit" value="Подобрать тур" >
-								<input class="mainContent__callFormInput" type="text" placeholder="Ваш номер" name="clientNumber" required>
+								<input class="mainContent__callFormInput" type="text" placeholder="Ваш телефон" name="clientNumber" required>
 							</div>
 						</form>
 					</div>
@@ -581,12 +581,13 @@
 			<input class="popup__formInput" placeholder="Ваш телефон" type="text" name="clientNumber" required>
 			<input class="popup__formInput" placeholder="Количество человек" type="text" name="persons" >
 			<input class="popup__formInput" placeholder="Сколько дней" type="text" name="days" >
-			<input class="popup__formInput" type="submit" value="Хочу в турцию!">
+			<input class="popup__formInput" id="js-popupFormInput" type="submit" value="Хочу в турцию!">
 			
 		</form>
 		<button class="popup__closeBtn"></button>
 	</div>
 	
+
 
 	<script type="text/javascript" src="js/main.js"></script>
 	

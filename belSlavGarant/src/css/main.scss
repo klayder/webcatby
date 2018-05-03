@@ -2,7 +2,9 @@
 @@include("../../bower_components/bootstrap/dist/css/bootstrap.min.css");
 @@include("../../bower_components/jquery-nice-select/css/nice-select.css");
 @@include("slick.scss");
+@@include("magnific-popup.css");
 @@include("slick-theme.scss");
+
 
 $primary-color: rgba(0,167,169,1);
 
@@ -133,13 +135,13 @@ html,body{
 
 .mainHeader__phoneListItem:last-child .mainHeeader__phoneItem--link{
 	&:before{
-		background-position: -20px -239px;
+		background-position: -16px -363px;
 	}
 }
 
 .mainHeader__phoneListItem:nth-child(2) .mainHeeader__phoneItem--link{
 	&:before{
-		background-position: -16px -363px;
+		background-position: -20px -239px;
 	}
 }
 
@@ -184,6 +186,11 @@ html,body{
 	
 }
 
+
+
+
+
+
 /****************************************** Section time to travel ******************/
 
 .mainContent__timeToTravel{
@@ -201,9 +208,13 @@ html,body{
 
 
 .mainContent__mainHeadingWrap{
-	background: rgba(0,169,155,.82);	
-	padding: 15px 30px;
+	background: rgba(0,169,169,.60);	
+	padding: 0px 30px;
 	
+}
+
+.flexWrapp{
+	margin-top: 5vh;
 }
 
 .mainContent__mainHeading{
@@ -293,7 +304,7 @@ html,body{
 .mainContentwhoAreWeDescription{
 	font-family: 'Montserrat';
 	font-weight: 600;
-
+	font-size: 20px;
 }
 
 
@@ -313,6 +324,8 @@ html,body{
 	margin-bottom: 15px;
 	border: 1px solid transparent;
 	cursor: pointer;
+	text-transform: none;
+	font-weight: 600;
 	&:hover{
 		border: 1px solid #00bbbd;
 		background: #fff;
@@ -338,6 +351,8 @@ html,body{
     padding: 20px 30px;
     background: #fff;
     margin-bottom: 15px;
+    text-transform: none;
+    font-weight: 600;
     
     .current{
     	padding: 0;
@@ -393,9 +408,11 @@ html,body{
 
 .mainContent__questionFormInput[type="submit"]{
 	color: #fff;
+	text-transform: uppercase;
 	background: linear-gradient(90deg,#ffc000  0%,#fe210e  100%);
+	border: none;
 	&:hover{
-		border: 1px solid transparent;
+		
 		opacity: 0.9;
    		cursor: pointer;
 	}
@@ -405,7 +422,7 @@ html,body{
 	padding-top: 10vh; 
 } 
 .mainContent__popupBtn{ 
-	margin-top: 40vh; 
+	margin-top: 45vh; 
 }
 
 @media (max-width: 1024px){
@@ -432,10 +449,10 @@ html,body{
 		display: none;
 	}
 	.mainHeader__about {
-    	padding-top: 10px;
+    	padding-top: 0px;
 	}
 	.mainHeader__contacts {
-    	padding-top: 23px;
+    	padding-top: 10px;
 	}
 	.mainHeader__phoneListItem:last-child{
 		margin-bottom: 0;
@@ -443,12 +460,19 @@ html,body{
 	.mainContent__address{
 		margin-bottom: 5px;
 	}
+	.mainHeader__phoneList{
+		margin-bottom: 10px;
+	}
 	
 }
 @media (max-width: 640px){
 
-.mainContent__whoAreWeHeading--name{
+	.mainContent__whoAreWeHeading--name{
        margin-top: 0px;
+	}
+
+	.mainContentwhoAreWeDescription{
+		font-size: 16px;
 	}
 }
 @media (max-width: 532px){
@@ -478,7 +502,7 @@ html,body{
 
 @media (max-width: 477px){
 	.mainContent__whoAreWeHeading {
-		font-size: 21px;
+		font-size: 20px;
 	}
 }
 
@@ -558,7 +582,7 @@ html,body{
 
 .mainContent__glleryFoto{
 	width: 100%;
-	height: auto;
+	height:100%;
 
 }
 
@@ -601,6 +625,7 @@ html,body{
 	padding: 20px 10px;
 	width: 70%;
 	margin-left: 15%;
+	font-weight: 600;
 
 }
 
@@ -610,6 +635,7 @@ html,body{
 }
 
 .mainContent__timeToChooseQuestion{
+	
 	display: none;
 }
 
@@ -701,6 +727,30 @@ html,body{
 	background-size: cover;
 	display: block;
 	cursor: pointer;
+	&:after{
+		@extend .btns;
+	
+		content: "Видеоотзыв";
+	    cursor: pointer;
+		position: absolute;
+		top: 50%;
+		margin-top: -33px;
+		left: 50%;
+		margin-left: -125px;
+		padding: 25px 80px;
+	}
+	&:before{
+    	content: "";
+    	position: absolute;
+    	width: 13px;
+    	height: 13px;
+    	display: block;
+    	background: url('../img/Sprite/css_sprites.png') -20px -126px;
+    	top: 50%;
+    	left: 70%;
+    	margin-top: -3px;
+    	z-index: 1;
+    }
 	&:hover{
 		background:  linear-gradient(90deg,rgba(0,167,169,0.6)  0%, rgba(0,167,169,0.6)  100%),
 		url(../img/bg-videoReview.jpg) no-repeat top center; 
@@ -713,30 +763,7 @@ html,body{
 
 
 
-.mainContent__videoReviewBtn{
-	@extend .btns;
-	
-	
-    cursor: pointer;
-	position: absolute;
-	top: 50%;
-	margin-top: -33px;
-	left: 50%;
-	margin-left: -125px;
-	padding: 25px 80px;
-	&:after{
-    	content: "";
-    	position: absolute;
-    	width: 13px;
-    	height: 13px;
-    	display: block;
-    	background: url('../img/Sprite/css_sprites.png') -20px -126px;
-    	top: 50%;
-    	left: 80%;
-    	margin-top: -7px;
-    }
 
-}
 
 
 
@@ -853,9 +880,15 @@ html,body{
 
 
 @media (max-width: 540px){
-	.mainContent__videoReviewBtn{
-		padding: 25px 60px;
+	.mainContent__videoReviewBtnWrap{
+		&:after{
+			padding: 25px 60px;
+		}
+		&:before{
+			left: 77%;
+		}
 	}
+	
 	.mainContent__videoReviewCaption{
 		font-size: 14px;
 		font-weight: 600;
@@ -989,24 +1022,28 @@ width: calc( 100% + 8px);
 
 
 .mainContent__callForm{
-	
+	padding-top: 20px;
 }
 
 .mainContent__callFormInput{
 	@extend .btns;
-    padding: 25px 60px;
+    padding: 18px 60px;
     cursor: pointer;
   }
 
 .mainContent__callFormInput[type="text"]{
 	background: #fff;
 	padding-left: 40px;
-	padding-bottom: 24px;
+	padding-bottom: 18px;
 	padding-right: 70px;
 	color: #000;
 	position: absolute;
 	left: -75px;
 	z-index:1;	
+	text-transform: none;
+	&::placeholder{
+		color: #000;
+	};
 }
 
 .mainContent__callFormInput[type="submit"]{
@@ -1242,6 +1279,7 @@ width: calc( 100% + 8px);
 }
 .mainContent__bookItHeadingWrap {
 	padding: 0;
+	padding-top: 55px;
 }
 .mainContent__bookItHeading{
 	font-family: 'Montserrat';
@@ -1269,15 +1307,21 @@ width: calc( 100% + 8px);
 	    
     width: 405px;
 	border-radius: 30px;
-    padding: 25px 30px;
+    padding: 18px 30px;
     cursor: pointer;
+    &::placeholder{
+    	color: #000;	
+    	font-size: 18px;
+    	font-family: "Montserrat";
+    	font-weight: 500;
+    }
       
 }
 
 .mainContent__bookItFormInput[name="clientNumber"]{
 	background: #fff;
 	color: #000;
-	padding: 23px 30px;
+	padding: 18px 30px;
 	margin-bottom: 20px;
 	text-transform: none;
 }
@@ -1320,6 +1364,15 @@ width: calc( 100% + 8px);
     }
 }
 
+@media(max-width: 1024px){
+	.mainContent__bookItHeadingWrap {
+		
+		padding-top: 20px;
+	}
+}
+
+
+
 @media(max-width: 992px){
 	.mainContent__bookItFormWrap{
 		margin-top: 40px;
@@ -1355,6 +1408,20 @@ width: calc( 100% + 8px);
 		background: transparent;
 	}
 }
+
+@media(max-width: 768px){
+	.mainContent__bookItHeadingWrap {
+		padding-top: 0px;
+	}
+	.mainContent__bookItHeading{
+		line-height: 35px;
+	}
+	.mainContent__bookItFormWrap{
+		margin-top: 5px;
+	}
+
+}
+
 
 @media(max-width: 550px){
 	.mainContent__bookIt{
@@ -1401,7 +1468,7 @@ width: calc( 100% + 8px);
 
 .mainContent__regaliaItem{
 	font-family: inherit;
-	font-weight: 600;
+	font-weight: 500;
 	font-size: 18px;
 	padding-top: 70px;
 	padding-right: 20px;
@@ -1570,7 +1637,7 @@ width: calc( 100% + 8px);
 }
 
 .mainContent__specialOfferTourName{
-	font-weight: 600;
+	font-weight: 500;
 	font-size: 24px;
 	color: #fff;
 	margin: 0; 
@@ -1579,12 +1646,13 @@ width: calc( 100% + 8px);
 }
 
 .maincontent__tourDetailsList{
-	font-weight: bold;
+	font-weight:600;
 	font-size:18px;
 	color: #fff;
 	display: flex;
 	justify-content: center;
 	margin: 0;
+
 }
 
 .mainContent__tourDetailsItem{
@@ -1627,9 +1695,22 @@ width: calc( 100% + 8px);
 	padding: 20px 60px;
 	margin-top: 40px;
 	cursor: pointer;
+	position: relative;
 	&:hover{
 		opacity: .9;
 	}
+	&:after{
+    	content: "";
+    	position: absolute;
+    	width: 20px;
+    	height: 20px;
+    	display: block;
+    	background: url('../img/Sprite/css_sprites.png') -20px -179px;
+    	top: 50%;
+    	left: 85%;
+    	margin-top: -10px;
+    	transition: all 1s;
+    }
 }
 
 .mainContent__specialOfferMask--top{
@@ -1670,12 +1751,16 @@ width: calc( 100% + 8px);
 	.mainContent__comeToUsHeading,
 	.mainContent__aboutUsHeading,
 		.mainContent__specialOfferHeading{
-			font-size: 24px;
+			font-size: 28px;
 		}
 	.mainContent__comeToUsHeading,
 	.mainContent__aboutUsHeading{
 		padding-top: 0px;
 	}
+	.mainContent__specialOfferTour{
+    	padding-left: 0;
+    	padding-right: 0;
+    }
 
 }
 
@@ -1702,8 +1787,9 @@ width: calc( 100% + 8px);
         margin-right: 0;
     }
     .mainContent__specialOfferHeading{
-    	font-size: 22px;
+    	font-size: 24px;
     }
+    
 }
 
 
@@ -1774,8 +1860,8 @@ width: calc( 100% + 8px);
 		display: block;
 		width: 75%;
 		height: 500px;
-		background: url("../img/bg-comeToUs.jpg") no-repeat;
-		background-size: 100% 100%;
+		background: url("../img/bg-comeToUs2.jpg") no-repeat;
+		background-size: cover;
 		position: absolute;
 		transform: skew(-15deg,-2deg);
 		top:-15px;
@@ -1809,6 +1895,7 @@ width: calc( 100% + 8px);
 	font-size: 18px;
 	color: #fff;
 	margin-top: 30px;
+	margin-left: -35px;
 
 }
 
@@ -1828,6 +1915,7 @@ width: calc( 100% + 8px);
 .mainContent__comeToUsTelehonesList{
 	margin: 0;
 	margin-top: 25px;
+	margin-left: -85px;
 }
 
 .mainContent__comeToUsListItem--code{
@@ -1839,6 +1927,7 @@ width: calc( 100% + 8px);
 	padding: 0;
 	padding-left: 30px;
 	position: relative;
+
 	&:before{
 		content:"";
 		width: 30px;
@@ -1879,6 +1968,7 @@ width: calc( 100% + 8px);
 	font-size: 18px;
 	font-weight: 600;
 	color: #fff;
+	margin-left: -115px;
 	&:hover{
 		text-decoration: none;
 		text-shadow: 0px 0px 2px  10px $primary-color;
@@ -1897,7 +1987,25 @@ width: calc( 100% + 8px);
 	.mainContent__comeToUsEmailWrap{
 		margin-left: -50px;
 	}
+	.mainContent__comeToUsEmail{
+		margin-left: 0;
+	}
+	.mainContent__comeToUsWorkTime{
+		margin-left: 0px;
+	}
+	.mainContent__comeToUsTelehonesList{
+		margin-left: 0;
+	}
 	
+}
+@media(max-width: 480px){
+	.mainContent__comeToUsHeading{
+		font-size: 24px;
+		margin-bottom: 0px;
+	}
+	.mainContent__comeToUs{
+		padding-top: 60px;
+	}
 }
 
 @media(max-width: 650px){
@@ -1911,8 +2019,8 @@ width: calc( 100% + 8px);
 		width: 100%;
 		height: auto;
 		padding-left: 0;
-		padding-top: 60px;
-		padding-bottom: 60px;
+		padding-top: 30px;
+		padding-bottom: 30px;
 		background: url("../img/bg-comeToUs.jpg") no-repeat;
 		background-size: 100% 100%;
 		&:after{
@@ -2200,4 +2308,12 @@ width: calc( 100% + 8px);
 	.popup__thanks {
 	    width: 100%;
 	}
+	.mainFooter {
+	    padding-top: 10px;
+	    padding-bottom: 10px;
+	}
 }
+
+
+
+/********************************************************************/
