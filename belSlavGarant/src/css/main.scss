@@ -180,6 +180,8 @@ html,body{
 	.mainHeader__about{
 		width: 100px;
 	}
+
+	
 }
 
 /****************************************** Section time to travel ******************/
@@ -425,14 +427,12 @@ html,body{
 		padding-top: 60px;
 		padding-bottom: 30px;
 	}
-	.mainContent__whoAreWeHeading--name{
-       margin-top: 0px;
-	}
+	
 	.mainHeader__phoneListItem:first-child{
 		display: none;
 	}
 	.mainHeader__about {
-    	padding-top: 5px;
+    	padding-top: 10px;
 	}
 	.mainHeader__contacts {
     	padding-top: 23px;
@@ -445,7 +445,12 @@ html,body{
 	}
 	
 }
+@media (max-width: 640px){
 
+.mainContent__whoAreWeHeading--name{
+       margin-top: 0px;
+	}
+}
 @media (max-width: 532px){
 	.mainContentwhoAreWeDescription span{
 		display: block;
@@ -1951,6 +1956,7 @@ width: calc( 100% + 8px);
 	font-family: inherit;
 	font-weight: inherit;
 	font-size: inherit;
+	line-height: 30px;
 	text-decoration: none;
 	color: #000;
 	margin: 0;
@@ -1991,9 +1997,11 @@ width: calc( 100% + 8px);
 	z-index: 100;
 	top: 50%;
 	left: 50%;
-	margin-left: -25%;
+	transform: translate(-50%,-50%);
+
+	
 	text-align: center;
-	margin-top: -15%;
+	
 	padding-top: 50px; 
 	padding-bottom: 45px;
 	background: rgba(0,167,169,.8);
@@ -2123,6 +2131,7 @@ width: calc( 100% + 8px);
 
 .popup__formInput[type="submit"]{
 	width: 70%;
+	border: none;
 }
 
 .popup__closeBtn{
@@ -2182,7 +2191,13 @@ width: calc( 100% + 8px);
 .thanksWrap{
 	width: 100vw;
 	height: 100vh;
-	background: url("../img/bg-about.jpg") no-repeat;
-	background-size: 100% 100%;
+	background: url("../img/bg-about.jpg") no-repeat top center;
+	background-size: cover;
 
+}
+
+@media screen and (max-width: 640px){
+	.popup__thanks {
+	    width: 100%;
+	}
 }
