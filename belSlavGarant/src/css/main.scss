@@ -81,8 +81,8 @@ html,body{
 }
 
 .mainHeader__about{
-	padding-top:12px;
-	padding-bottom: 8px;
+	/*padding-top:12px;*/
+	/*padding-bottom: 8px;*/
 	display: flex;
 }
 
@@ -103,6 +103,7 @@ html,body{
 	padding-left: 33px;
 	margin-right: 27px;
 	min-width: 140px;
+	margin-bottom: 0;
 
 }
 
@@ -223,6 +224,7 @@ html,body{
 	text-transform: uppercase;
 	color: #fff;
 	text-align: center;
+
 }
 
 .btns{
@@ -1045,6 +1047,7 @@ width: calc( 100% + 8px);
 	padding-left: 40px;
 	padding-bottom: 18px;
 	padding-right: 70px;
+	font-weight: 600;
 	color: #000;
 	position: absolute;
 	left: -75px;
@@ -1076,13 +1079,15 @@ width: calc( 100% + 8px);
     	display: block;
     	background: url('../img/Sprite/css_sprites.png') -20px -179px;
     	right: 5%;
-    	margin-top: 25px;
+    	margin-top: 19px;
     	z-index: 2;
+    	transition: all 0.5s;
 
     }
     &:hover{
     	&:after{
-    		
+    		right: -20%;
+    		opacity: 0;
     	}
     }
 }
@@ -1288,7 +1293,7 @@ width: calc( 100% + 8px);
 }
 .mainContent__bookItHeadingWrap {
 	padding: 0;
-	padding-top: 55px;
+	padding-top: 33px;
 }
 .mainContent__bookItHeading{
 	font-family: 'Montserrat';
@@ -1313,7 +1318,7 @@ width: calc( 100% + 8px);
 
 .mainContent__bookItFormInput{
 	@extend .btns;
-	    
+	line-height: 24px;
     width: 405px;
 	border-radius: 30px;
     padding: 18px 30px;
@@ -1362,12 +1367,13 @@ width: calc( 100% + 8px);
     	top: 50%;
     	left: 90%;
     	margin-top: -10px;
-    	transition: all 1s;
+    	transition: all .5s;
     }
     &:hover{
     	&:after{
-    		top: -10%;
-    		left: 300%;
+    		
+    		left: 100%;
+    		opacity: 0;
 
     	}
     }
@@ -1438,7 +1444,7 @@ width: calc( 100% + 8px);
 	}
 	.mainContent__bookItHeading{
 		
-		padding-left: 10px;
+		/*padding-left: 10px;*/
 		
 	}
 	.mainContent__bookItHeading--viberIcon{
@@ -1705,9 +1711,7 @@ width: calc( 100% + 8px);
 	margin-top: 40px;
 	cursor: pointer;
 	position: relative;
-	&:hover{
-		opacity: .9;
-	}
+
 	&:after{
     	content: "";
     	position: absolute;
@@ -1718,8 +1722,15 @@ width: calc( 100% + 8px);
     	top: 50%;
     	left: 85%;
     	margin-top: -10px;
-    	transition: all 1s;
+    	transition: all .3s;
     }
+    &:hover{
+		opacity: .9;
+		&:after{
+			left: 100%;
+			opacity: 0;
+		}
+	}
 }
 
 .mainContent__specialOfferMask--top{
@@ -1894,13 +1905,13 @@ width: calc( 100% + 8px);
 
 .mainContent__comeToUsAddress--smallText{
 	font-size: 18px;
-	font-weight: 600;
+	font-weight: 400;
 	margin: 0;
 }
 
 .mainContent__comeToUsWorkTime{
 	font-family: inherit;
-	font-weight: 600;
+	font-weight: 400;
 	font-size: 18px;
 	color: #fff;
 	margin-top: 30px;
@@ -1975,7 +1986,7 @@ width: calc( 100% + 8px);
 	
 	font-family: inherit;
 	font-size: 18px;
-	font-weight: 600;
+	font-weight: 400;
 	color: #fff;
 	margin-left: -115px;
 	&:hover{
@@ -2240,7 +2251,7 @@ width: calc( 100% + 8px);
 	margin-left: auto;
 	margin-right: auto;
 	font-size: 15px;
-	font-weight: 500;
+	font-weight: 600;
 	text-transform: none;
 	padding: 13px 30px;
 	width: 80%;
