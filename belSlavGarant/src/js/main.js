@@ -44,12 +44,19 @@ $('.mainContent__videoReviewBtnWrap').magnificPopup({type:'iframe'});
 
 
 $(".mainContent__servicesListItem--heading").click((evt)=>{
-  
+  let scrTop=$(window).scrollTop();
   let message="Набор для отдыха: "+$(evt.target).text();
   $("#popup__formIn").val(message);
-  console.log($(".mainContent__questionFormInput:first-child").val());
+  //console.log($(".mainContent__questionFormInput:first-child").val());
+  
+  console.log(scrTop);
+  addListeners();
   openPopup();
-
+ console.log($(evt.target).offset().top);
+  $('html, body').animate({
+      scrollTop: scrTop
+   }, 10);
+ 
 
   
 

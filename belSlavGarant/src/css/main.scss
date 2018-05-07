@@ -184,6 +184,8 @@ html,body{
 		width: 100px;
 	}
 
+
+
 	
 }
 
@@ -211,16 +213,18 @@ html,body{
 .mainContent__mainHeadingWrap{
 	background: rgba(0,169,169,.60);	
 	padding: 0px 30px;
+	padding-bottom: 1px;
 	
 }
 
 .flexWrapp{
-	margin-top: 5vh;
+	margin-top: 27vh;
 }
 
 .mainContent__mainHeading{
 	font-family: 'Gagalin';
 	font-size: 80px;
+	line-height: 80px;
 	text-transform: uppercase;
 	color: #fff;
 	text-align: center;
@@ -360,7 +364,7 @@ html,body{
     	padding: 0;
     	display: block;
     	max-width: 200px;
-    	
+    	font-weight: 600;
     }
 
     
@@ -424,7 +428,7 @@ html,body{
 	padding-top: 10vh; 
 } 
 .mainContent__popupBtn{ 
-	margin-top: 45vh; 
+	margin-top: 22vh; 
 }
 
 @media (max-width: 1024px){
@@ -438,6 +442,7 @@ html,body{
 @media (max-width: 768px){
 	.mainContent__mainHeading{
 		font-size: 60px;
+		line-height: 60px;
 	}
 	.mainContent__popupBtn{ 
 		margin-top: 30vh; 
@@ -485,6 +490,7 @@ html,body{
 	
 	.mainContent__mainHeading{
 		font-size: 40px;
+		line-height: 40px;
 	}
 
 	.mainContent__popupBtn{
@@ -498,7 +504,8 @@ html,body{
 	}
 	
 	.mainContent__mainHeadingWrap{
-		margin-top: 60px;
+		margin-top: -120px;
+
 	}
 }
 
@@ -506,11 +513,18 @@ html,body{
 	.mainContent__whoAreWeHeading {
 		font-size: 20px;
 	}
+	.flexWrapp{
+		margin-top: 10vh;
+	}
+	.mainContent__popupBtn{
+		margin-top: 30vh;
+	}
 }
 
 @media (max-width: 375px){
 	.mainContent__mainHeading{
 		font-size: 30px;
+		line-height: 30px;
 	}
 	.mainContent__popupBtn{
 	   	//margin-top: 180px;
@@ -531,6 +545,7 @@ html,body{
 @media (max-width: 320px){
 	.mainContent__mainHeading{
 		font-size: 30px;
+		line-height: 30px;
 	}
 }
 
@@ -1323,11 +1338,12 @@ width: calc( 100% + 8px);
 	border-radius: 30px;
     padding: 18px 30px;
     cursor: pointer;
+    font-weight: 600;
     &::placeholder{
     	color: #000;	
     	font-size: 18px;
     	font-family: "Montserrat";
-    	font-weight: 500;
+    	font-weight: 600;
     }
       
 }
@@ -2255,6 +2271,9 @@ width: calc( 100% + 8px);
 	text-transform: none;
 	padding: 13px 30px;
 	width: 80%;
+	&::placeholder{
+		font-weight: 600;
+	};
 }
 
 .popup__formInput[type="submit"]{
