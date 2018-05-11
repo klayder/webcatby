@@ -1,0 +1,11 @@
+
+html,body{
+	font-family: 'Proxima Nova Rg', Georgia, sans-serif; /**/
+	min-width: 320px;
+	font-size: 10px;
+	background-color:grey;
+	
+}
+
+@@include("header.scss");
+@@include("main-mainScrean.scss");

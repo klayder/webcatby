@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=devise-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/dependencies/dependencies.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	
+	<title>MeKyC</title>
+</head>
+<body>
+	<header class="main-header main-header--hidden">
+		<div class="container">
+			<div class="row">
+				<article class="main-header__logo col-md-2 col-12">
+					<a class="main-header__logo-link " href="#">
+						<picture>
+                			<source
+                   				media="(max-width: 768px)"
+                          		srcset="img/h-logo-mobile.png">
+                            <img class="main-header__logo-img" src="img/h-logo.png">
+           				</picture>
+						
+					</a>
+					<a class="main-header__toggel-btn " href="#" 
+							onclick="(function(){
+								document.querySelector('.main-header').classList.toggle('main-header--hidden');
+								document.querySelector('.main-header__contacts').classList.toggle('main-header__contacts--hide');
+								document.querySelector('.main-header__numbers').classList.toggle('main-header__numbers--hide');
+								document.querySelector('.main-header__main-navigation').classList.toggle('main-header__main-navigation--hide');
+							})()">	
+						<span class="main-header__btn-item"></span>
+						<span class="main-header__btn-item"></span>
+						<span class="main-header__btn-item"></span>
+					</a>	
+				</article>
+				<article class="main-header__function col-md-2 d-none d-lg-block">
+					<p class="main-header__function-content">
+						доставка грузов<br>по Беларуси и СНГ
+					</p>
+				</article>
+				<article class="main-header__contacts main-header__contacts--hide col-lg-4 col-md-6 col-12">
+					<ul class="main-header__contacts-list">
+						<li class="main-header__contacts-item">
+							<a class="main-header__address" href="#">г. Минск, ул. Казинца 11А, <span class="main-header__addree-wrap">офис Б402</span></a>
+						</li>
+						<li class="main-header__contacts-item">
+							<span class="main-header__work-time">Пн-пт: 8.30 – 18.30</span>
+						</li>
+						<li class="main-header__contacts-item">
+							<a href="mailto:post@mekus.by">post@mekus.by</a>
+						</li>
+					</ul>
+				</article>
+				<article class="main-header__numbers main-header__numbers--hide col-lg-2 col-md-3 col-12">
+					<ul class="main-header__numbers-list">
+						<li class="main-header__numbers-item">
+							<a class="main-header__number" href="tel:+375447162692">+375 44 716-26-92</a>
+						</li>
+						<li class="main-header__numbers-item">
+							<a class="main-header__number" href="tel:+375172346692">+375 17 234-66-92</a>
+						</li>
+					</ul>
+				</article>
+				<article class="main-header__numbers col-md-2 p-0 d-none d-lg-block">
+					<a class="main-header__call-courier" href="#">Вызвать курьера</a>
+				</article>
+				<nav class="main-header__main-navigation main-header__main-navigation--hide col-md-12 ">
+					<ul class="main-header__main-navigation-list row">
+						<li class="main-header__navigation-list-item">
+							<a class="main-header__navigation-btn" href="#">О компании</a>
+						</li>
+						<li class="main-header__navigation-list-item">
+							<a class="main-header__navigation-btn" href="#">Новости</a>
+						</li>
+						<li class="main-header__navigation-list-item">
+							<a class="main-header__navigation-btn" href="#">Тарифы</a>
+						</li>
+						<li class="main-header__navigation-list-item">
+							<a class="main-header__navigation-btn main-header__navigation-btn--active" >Вопрос-ответ</a>
+						</li>
+						<li class="main-header__navigation-list-item">
+							<a class="main-header__navigation-btn" href="#">Контакты</a>
+						</li>
+						<li class="main-header__navigation-list-item">
+							<a class="main-header__navigation-btn" href="#">Личный кабинет</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+	<main class="main-content">
+		<section class="mainContent__main-screen">
+			<div class="mainContent__main-slogan-wrap">
+				<h1 class="main-content__main-slogan">
+					Экспресс-доставка корреспонденции  <span class="main-content__main-slogan-break">и грузов по Беларуси и СНГ</span> 
+				</h1>
+				<div class="main-content__main-screen-btn-wrap">
+					<a class="main-content__main-screen-order-delivery" href="#">Заказать доставку</a>
+					<span class="main-content__main-screen-text">или</span>
+					<a class="main-content__main-screen-get-cost" href="#">Рассчитать стоимость онлайн</a>
+				</div>
+			</div>
+		</section>
+		<section class="main-content__calculations-form-section">
+			<div class="container">
+				<form class="main-content__calculations-form">
+					<div class="row">
+						<div class="main-content__calculation-form--left-side">
+							<h3 class="main-content__calculation-form-heading">Рассчитайте стоимость и сроки доставки Вашего груза</h3>
+							<label class="main-content__calculation-form-label">
+								Город отправления
+								<input type="text" name="cityDeparture">
+							</label>
+							<label class="main-content__calculation-form-label">
+								Город доставки
+								<input type="text" name="cityDelivery">
+							</label>
+							<label class="main-content__calculation-form-label">
+								Вес груза
+								<input type="text" name="weight">
+							</label>
+						</div>
+						<div class="main-content__calculation-form--right-side">
+							<span class="main-content__calculation-delivery-msg">
+								Срок доставки: 
+								<span class="main-content__calculation-delivery-value"> 
+									3 дня
+								</span>
+							</span>
+							<span class="main-content__calculation-delivery-msg">
+								Стоймость:
+								<span class="main-content__calculation-delivery-value">
+									150 BYN
+								</span>
+							</span>
+							<input class="main-content__calculation-form--submit-btn" type="submit" value="Заказать доставку">
+						</div>
+					</div>			
+				</form>
+			</div>
+		</section>
+	</main>	
+
+	<script type="text/javascript" src="js/dependencies/dependencies.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
